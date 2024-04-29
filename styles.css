@@ -1,0 +1,33 @@
+body {
+    background-color: #DEB887;
+}
+
+h1 {
+    color:#2E8B57;
+    text-align: center;
+}
+
+h2 {
+    color:#2E8B57;
+   
+}
+
+p {
+    font-family: 	Arial;
+    color: #2E8B57;
+    font-size: 15px;
+}
+
+a {
+    font-family: 	Arial;
+    color: #2E8B57;
+    font-size: 15px;
+}
+
+a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+
+a:active {
+    color: #ff0000; /* Change color when link is clicked */
+}
