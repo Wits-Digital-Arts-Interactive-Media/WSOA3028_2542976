@@ -28,6 +28,7 @@ a:hover {
     color: #ffffff; /* Change color on hover */
 }
 
-a:active {
-    color: #ff0000; /* Change color when link is clicked */
+li a:is(:link :active :visited).active {
+    color: #ffffff; 
+    background-color: black;
 }

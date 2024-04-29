@@ -1,0 +1,1 @@
+const activePage = window.loca
