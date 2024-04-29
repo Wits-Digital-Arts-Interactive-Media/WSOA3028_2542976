@@ -12,23 +12,20 @@ h2 {
    
 }
 
-p {
-    font-family: 	Arial;
-    color: #2E8B57;
-    font-size: 15px;
-}
-
 a {
-    font-family: 	Arial;
+    font-family: Arial;
     color: #2E8B57;
     font-size: 15px;
+    background-color: #ffffff00; /* Transparent background */
 }
 
 a:hover {
-    color: #ffffff; /* Change color on hover */
+    color: #FFFFFF;
+    background-color: #2E8B57; /* Change background color on hover */
 }
 
-li a:is(:link :active :visited).active {
-    color: #ffffff; 
-    background-color: black;
+.active {
+    color: #4800ff; /* Change color of active link */
+    background-color: rgba(0, 0, 0, 0); /* Change background color of active link */
 }
+
