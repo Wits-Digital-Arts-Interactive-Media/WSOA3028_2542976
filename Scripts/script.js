@@ -55,4 +55,31 @@
     loadPage(pages[0].fileName);
 }); */
 
-const root = "/WSOA3028_2542976/"
+const root = "/WSOA3028_2542976";
+
+const pages = [
+    { name: "Index", href: `${root}/index.html` },
+    { name: "Portfolio", href: `${root}/Pages/Portfolio/portfolio.html` },
+    { name: "About Me", href: `${root}/Pages/About Me/about.html` },
+    { name: "Essays", href: `${root}/Pages/Essays/essay.html` },
+    { name: "Blogposts", href: `${root}/Pages/Blogs/blog.html` },
+    { name: "Playground", href: `${root}/Pages/TheHub/playground.html` }
+];
+
+export function initialise(currentPageName) {
+    const nav = document.querySelector("header > nav");
+    const ul = document.createElement("ul");
+
+    for (const page of pages) {
+        const li = document.createElement("li");
+        const anchor = document.createElement("a");
+        anchor.innerText = page.name;
+        if (page.name !== currentPageName) {
+            anchor.setAttribute('href', page.href);
+        }
+
+        li.appendChild(anchor);
+        ul.appendChild(li);
+    }
+    nav.appendChild(ul);
+}
