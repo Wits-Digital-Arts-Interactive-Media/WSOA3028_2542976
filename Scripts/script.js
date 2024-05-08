@@ -63,6 +63,7 @@ const pages = [
     { name: "About Me", href: `${root}/Pages/About Me/about.html` },
     { name: "Essays", href: `${root}/Pages/Essays/essay.html` },
     { name: "Blogposts", href: `${root}/Pages/Blogs/blog.html` },
+    { name: "Design", href: `${root}/Pages/Design/design.html` },
     { name: "Playground", href: `${root}/Pages/TheHub/playground.html` }
 ];
 

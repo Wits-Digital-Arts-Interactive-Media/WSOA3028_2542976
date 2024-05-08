@@ -1,4 +1,4 @@
-body {
+/* body {
     background-color: #DEB887;
 }
 
@@ -16,17 +16,17 @@ a {
     font-family: Arial;
     color: #2E8B57;
     font-size: 15px;
-    background-color: #ffffff00; /* Transparent background */
+    background-color: #ffffff00; 
 }
 
 a:hover {
     color: #FFFFFF;
-    background-color: #2E8B57; /* Change background color on hover */
+    background-color: #ff0000; 
 }
 
 .active {
-    color: #4800ff; /* Change color of active link */
-    background-color: rgba(0, 0, 0, 0); /* Change background color of active link */
+    color: #4800ff; 
+    background-color: rgba(0, 0, 0, 0); 
 }
 
 
@@ -55,3 +55,4 @@ a:hover {
 #generate-btn:hover {
     background-color: #0056b3;
 }
+/*
