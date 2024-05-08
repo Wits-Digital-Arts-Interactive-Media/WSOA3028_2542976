@@ -1,6 +1,7 @@
-<!---document.addEventListener("DOMContentLoaded", function() {
+//document.addEventListener("DOMContentLoaded", function() {
     // Define pages and their corresponding file names
-    const pages = [
+
+   /* const pages = [
         { name: "Index", fileName: "index.html" },
         { name: "Portfolio", fileName: "../WSOA3028_2542976/Pages/Portfolio/portfolio.html" },
         { name: "About Me", fileName: "../WSOA3028_2542976/Pages/About Me/about.html" },
@@ -50,8 +51,8 @@
         });
     }
 
- 
     createLinks();
     loadPage(pages[0].fileName);
-});
---->
+}); */
+
+const root = "/WSOA3028_2542976/"
