@@ -1,5 +1,5 @@
-/* body {
-    background-color: #DEB887;
+body {
+    background-color: #ffffff;
 }
 
 h1 {
@@ -21,7 +21,7 @@ a {
 
 a:hover {
     color: #FFFFFF;
-    background-color: #ff0000; 
+    background-color: #2600ff; 
 }
 
 .active {
@@ -55,4 +55,3 @@ a:hover {
 #generate-btn:hover {
     background-color: #0056b3;
 }
-/*

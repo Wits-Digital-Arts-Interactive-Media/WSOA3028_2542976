@@ -19,7 +19,9 @@ const quotes = [
     "Life is what happens when you're busy making other plans. - John Lennon",
     "You miss 100% of the shots you don't take. - Wayne Gretzky",
     "You only live once, but if you do it right, once is enough. - Mae West",
-    "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson"
+    "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
+    "I feel like a lion in this , because you're my pride and joy - Anezka K Joseph",
+    " 1 - Liam J Moodley"
 ];
 
 // Function to generate a random quote
