@@ -21,7 +21,8 @@ const quotes = [
     "You only live once, but if you do it right, once is enough. - Mae West",
     "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
     "I feel like a lion in this , because you're my pride and joy - Anezka K Joseph",
-    " 1 - Liam J Moodley"
+    " The One , The Only , The Great - Liam J Moodley",
+    " I have nothing to say , put that in - Chris Ridley"
 ];
 
 // Function to generate a random quote
