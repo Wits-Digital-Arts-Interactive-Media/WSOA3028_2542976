@@ -20,8 +20,8 @@ const quotes = [
     "You miss 100% of the shots you don't take. - Wayne Gretzky",
     "You only live once, but if you do it right, once is enough. - Mae West",
     "The only person you are destined to become is the person you decide to be. - Ralph Waldo Emerson",
-    "I feel like a lion in this , because you're my pride and joy - Anezka K Joseph",
-    " 1 - Liam J Moodley"
+    "I feel like a lion , because you're my pride and joy. - Anezka K Joseph",
+    " There is one of you , only one. - Liam J Moodley"
 ];
 
 // Function to generate a random quote

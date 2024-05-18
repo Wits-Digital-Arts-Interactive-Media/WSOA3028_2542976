@@ -1,44 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#fff4f4">
-    <meta name="author" content="Liam Moodley"> 
-    <meta property="og:title" content="Liam Moodley: Web Design">
-    <meta property="og:description" content="GateWay to The Internet">
-    <meta property="og:type" content="Base Website"> 
-    
-    <title> Home </title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="module">import {initialise} from "./Scripts/script.js"; initialise("Index");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#fff4f4">
+  <meta name="author" content="Liam Moodley">
+  <meta property="og:title" content="Liam Moodley: Web Design">
+  <meta property="og:description" content="GateWay to The Internet">
+  <meta property="og:type" content="Base Website">
+  <title>Liam Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="../../Scripts/activePage.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script type="module">
+    import { initialise } from "./Scripts/script.js";
+    initialise("Index");
+  </script>
 </head>
-<body> 
-    <header>        
-        <b><h4 style="text-align: left;"> Liam's Portfolio </h4></b>   
-        <hr>
+<body>
+  <header>
+    <a><h1 style="text-align: center;">Home</h1></a>
+    <hr>
+    <nav>
+      <a><h2 style="text-align: center;">BlitzNoval</h2></a>
+      <!-- .JS Menu -->
+    </nav>
+    <hr>
+  </header>
+  <main>
 
-        <hr>
-        <nav>
-           <!-- OLD NAV MENU WITH RELATIVE PATHING <ul style="text-align: center;">
-                <a href="../../index.html">Index</a>
-                <a href="../Portfolio/portfolio.html">Portfolio</a>
-                <a href="../About Me/about.html">About Me</a>
-                <a href="../Essays/essay.html">Essays</a>
-                <a href="../Blogs/blog.html">Blogposts</a>
-                <a href="../TheHub/playground.html">Playground</a>
-            </ul> -->
-        </nav>      
-    </header>
-
-    <!-- Container for the dynamically generated navigation menu -->
-    <div id="navMenuContainer">
-        <ul class="menu-list"></ul>
-    </div>
-
-     DDD
-    <footer>
-        <br><i style=" text-align: center; opacity: 0.5;"> Brought to you by | LJ Media | © February 2024 </i></br>
-    </footer>
+    <div class="container">
+      <section class="welcome-section" style="text-align: center;">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hello! I'm Liam Moodley, a passionate web designer. Explore my work and get to know me better.</p>
+      </main>
+    </section>
+  
+  
+  <footer>
+    <i style="text-align: center; opacity: 0.5;">Brought to you by | LJ Media | © February 2024</i>
+  </footer>
 </body>
 </html>

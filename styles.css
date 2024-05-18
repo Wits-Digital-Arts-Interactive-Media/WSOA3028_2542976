@@ -1,49 +1,43 @@
-
-
 body {
     background-color: #ffffff;
+    margin: 0; /* Ensure there's no margin around the body */
+    padding: 0; /* Ensure there's no padding around the body */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+h1, h2, a {
+    color: #000000;
 }
 
 h1 {
-    color:#2E8B57;
     text-align: center;
 }
 
-h2 {
-    color:#2E8B57;
-   
-}
-
 hr {
-  width: 100vw; /* Use 100vw for full viewport width */
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  border: none;
-  height: 1px;
-  background-color: black; /* Change this to set the line color */
+    width: 100%; /* Set width to 100% */
+    margin: 0; /* Remove default margins */
+    border: none;
+    height: 1px;
+    background-color: black;
 }
 
 a {
     font-family: Arial;
-    color: #2E8B57;
     font-size: 15px;
-    background-color: #ffffff00; 
+    background-color: #ffffff00;
+    text-decoration: none;
 }
 
 a:hover {
-    color: #FFFFFF;
-    background-color: #2600ff; 
+    color: #ff0000;
 }
 
-.active {
-    color: #4800ff; 
-    background-color: rgba(0, 0, 0, 0); 
+.current-page {
+    font-size: 18px;
+    font-weight: bold;
+    border-bottom: 2px solid #000000; /* Add a bottom border as an indicator */
+    color: #ff0000; /* Change color to indicate current page */
 }
-
-
 
 .container {
     text-align: center;
@@ -58,7 +52,7 @@ a:hover {
 #generate-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #ff0008;
     color: white;
     border: none;
     border-radius: 5px;
@@ -67,6 +61,70 @@ a:hover {
 }
 
 #generate-btn:hover {
-    background-color: #0056b3;
+    background-color: #ff0000;
 }
 
+/* Reset list styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Top-level menu */
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 10px; /* Add padding to ensure it doesn't touch the edges */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+nav > ul > li {
+    position: relative;
+}
+
+nav > ul > li > a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Dropdown menu */
+nav > ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out; /* Smooth transition for dropdown */
+}
+
+/* Dropdown menu items */
+nav > ul li ul li {
+    padding: 12px 16px;
+}
+
+/* Show dropdown on hover */
+nav > ul li:hover > ul {
+    display: block;
+    opacity: 1; /* Fade in the dropdown */
+}
+
+nav {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    justify-content: center; /* Center the content */
+    flex-direction: column; /* Stack items vertically */
+    width: 100%; /* Ensure nav takes full width */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width */
+}
+
+nav > a {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1px 1px;
+    text-decoration: none;
+    color: #333;
+}
