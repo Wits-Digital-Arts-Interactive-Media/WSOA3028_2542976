@@ -1,7 +1,7 @@
-/*
+
 
 body {
-    background-color: #e9e3b2;
+    background-color: #ffffff;
 }
 
 h1 {
@@ -12,6 +12,18 @@ h1 {
 h2 {
     color:#2E8B57;
    
+}
+
+hr {
+  width: 100vw; /* Use 100vw for full viewport width */
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  border: none;
+  height: 1px;
+  background-color: black; /* Change this to set the line color */
 }
 
 a {
@@ -58,4 +70,3 @@ a:hover {
     background-color: #0056b3;
 }
 
-/*
