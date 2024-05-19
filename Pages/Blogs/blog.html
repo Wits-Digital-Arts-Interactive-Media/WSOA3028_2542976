@@ -8,64 +8,11 @@
     <meta property="og:title" content="Liam Moodley: Web Design">
     <meta property="og:description" content="GateWay to The Internet">
     <meta property="og:type" content="Base Website">
-    
+    <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Blogposts");</script>
     <title>Blog Posts</title>
     <link rel="stylesheet" href="../../styles.css">
     <style>
-        /* Style for Timeline with Alternating Sides */
-        .timeline {
-            list-style-type: none;
-            padding: 0;
-            margin: 50px 0;
-            position: relative;
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .timeline-date {
-            font-size: 18px;
-            font-weight: bold;
-            width: 100px;
-            text-align: center;
-        }
-
-        .timeline-content {
-            max-width: 400px;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            background-color: #fff;
-        }
-
-        .timeline-content h3 {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content p {
-            font-size: 16px;
-            color: #666;
-            margin-bottom: 10px;
-        }
-
-        .timeline-content a {
-            text-decoration: none;
-            color: #007bff;
-            font-weight: bold;
-        }
-
-        .timeline-content a:hover {
-            text-decoration: underline;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            order: -1;
-        }
+        
     </style>
 </head>
 <body>
@@ -77,58 +24,105 @@
 
     <main>
         <ul class="timeline">
-            <li class="timeline-item">
-                <div class="timeline-date">Week 1</div>
-                <div class="timeline-content">
-                    <h3>Week 1 Blog Post</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
-                    <a href="../Blogs/blog1.html">Read More</a>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-date">Week 2</div>
-                <div class="timeline-content">
-                    <h3>Week 2 Blog Post</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
-                    <a href="blog2.html">Read More</a>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-date">Week 3</div>
-                <div class="timeline-content">
-                    <h3>Week 3 Blog Post</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
-                    <a href="blog3.html">Read More</a>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-date">Week 4</div>
-                <div class="timeline-content">
-                    <h3>Week 4 Blog Post</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
-                    <a href="blog4.html">Read More</a>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-date">Week 5</div>
-                <div class="timeline-content">
-                    <h3>Week 5 Blog Post</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
-                    <a href="blog5.html">Read More</a>
-                </div>
-            </li>
-            <li class="timeline-item">
-                <div class="timeline-date">Week 6</div>
-                <div class="timeline-content">
-                    <h3>Week 6 Blog Post</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
-                    <a href="blog6.html">Read More</a>
-                </div>
-            </li>
+          <li class="timeline-item">
+            <div class="timeline-date">Week 1</div>
+            <div class="timeline-content">
+                <h3>The Github Initiative</h3>
+                <p>GitHub over the past 2 years has been an enriching experience – a frustrating yet very enriching all the while teaching me about open-source platforms...</p>
+                <a href="../Blogs/blog1.html">Read More</a>
+            </div>
+            <div class="line"></div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-date">Week 2</div>
+            <div class="timeline-content">
+                <h3>Inspiration Time</h3>
+                <p>It is showing off the works of my life 
+                  and my works as a student. The course of interactive media has given me a platform to share my passions and opini...</p>
+                <a href="../Blogs/blog2.html">Read More</a>
+            </div>
+            <div class="line"></div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-date">Week 3</div>
+            <div class="timeline-content">
+                <h3>The User Experience</h3>
+                <p>When someone enters my website i want them to be in awe , not of me as a person but of just how simplistic yet exhilarating it is to scroll on my website...</p>
+                <a href="../Blogs/blog3.html">Read More</a>
+            </div>
+            <div class="line"></div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-date">Week 4</div>
+            <div class="timeline-content">
+                <h3>Charts Anyone?</h3>
+                <p>found working on this website I had a lot of trouble when it came to the css of some of the elements , as I found myself looking at lot of tutorials on W3Schools...</p>
+                <a href="../Blogs/blog4.html">Read More</a>
+            </div>
+            <div class="line"></div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-date">Week 5</div>
+            <div class="timeline-content">
+                <h3>FNB vs FlySafair</h3>
+                <p>Look there’s a lot of bad to say about the FNB website but we'll save that for the other column, let’s talk about the good. One you immediately know its...</p>
+                <a href="../Blogs/blog5.html">Read More</a>
+            </div>
+            <div class="line"></div>
+        </li>
+        <li class="timeline-item">
+            <div class="timeline-date">Week 6</div>
+            <div class="timeline-content">
+                <h3>Ethical Dilemmas in Software Engineering</h3>
+                <p>I chose to explore Bryan Cantrills’ discussion about Andreessen’s Corollary, it all clicked to me , over the years we have been made to be more...</p>
+                <a href="../Blogs/blog6.html">Read More</a>
+            </div>
+            <div class="line"></div>
+        </li>
+            
+            <!-- Add more items as needed -->
         </ul>
     </main>
     <footer>
         <br><i style="text-align: center; opacity: 0.5;"> Brought to you by | LJ Media | © February 2024 </i></br>
     </footer>
+
+    <script>
+      // Function to check if an element is in the viewport
+      function isInViewport(element) {
+          const rect = element.getBoundingClientRect();
+          return (
+              rect.top >= 0 &&
+              rect.left >= 0 &&
+              rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+              rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+      }
+
+      // Function to handle the animation of the line and content
+      function animateElements() {
+          const lines = document.querySelectorAll('.line');
+          lines.forEach(line => {
+              if (isInViewport(line)) {
+                  line.style.display = 'block';
+                  line.style.animation = 'growLine 1.5s ease forwards';
+              }
+          });
+
+          const contents = document.querySelectorAll('.timeline-content');
+          contents.forEach(content => {
+              if (isInViewport(content)) {
+                  content.style.display = 'block';
+                  content.style.animation = 'fadeInContent 1s ease forwards';
+              }
+          });
+      }
+
+      // Event listener for scrolling
+      window.addEventListener('scroll', animateElements);
+
+      // Initial animation check
+      animateElements();
+  </script>
 </body>
 </html>

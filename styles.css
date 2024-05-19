@@ -457,3 +457,122 @@ body {
       .card-buttons button:hover {
         background-color: #0056b3;
       }
+
+      /* BLOGPOSTS */
+
+      /* Style for Timeline with Alternating Sides */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+    }
+
+    .timeline {
+        list-style-type: none;
+        padding: 0;
+        margin: 50px 0;
+        position: relative;
+    }
+
+    .timeline-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    .timeline-item:hover .timeline-content {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .timeline-date {
+        font-size: 18px;
+        font-weight: bold;
+        width: 100px;
+        text-align: center;
+        color: #555;
+    }
+
+    .timeline-content {
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        animation: fadeInContent 1s ease forwards;
+        opacity: 0;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-content h3 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .timeline-content p {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .timeline-content a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+
+    .timeline-content a:hover {
+        text-decoration: underline;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content {
+        order: -1;
+    }
+
+    /* Stylized Line */
+    .line {
+        position: absolute;
+        top: 0;
+        left: 50px;
+        width: 2px;
+        height: 0;
+        background-color: #ccc;
+        z-index: -1;
+    }
+
+    /* Keyframe Animations */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInContent {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes growLine {
+        0% {
+            height: 0;
+        }
+        100% {
+            height: 100%;
+        }
+    }
