@@ -1,40 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liam's Index">
-    <meta name="author" content="Liam Moodley"> 
-    <meta property="og:title" content="Liam Moodley: Web Design">
-    <meta property="og:description" content="GateWay to The Internet">
-    <meta property="og:type" content="Base Website"> 
-    
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="../../styles.css">
-    <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Portfolio");</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Liam's Index">
+  <meta name="author" content="Liam Moodley">
+  <meta property="og:title" content="Liam Moodley: Web Design">
+  <meta property="og:description" content="GateWay to The Internet">
+  <meta property="og:type" content="Base Website">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="../../styles.css">
+  <script type="module">
+    import { initialise } from "/WSOA3028_2542976/Scripts/script.js";
+    initialise("Portfolio");
+  </script>
+  <style>
+    .block-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+
+    .block {
+      background-color: #fff;
+      border: 2px solid #333;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.5s ease-out;
+    }
+
+    .block:hover {
+      transform: translateY(-5px) scale(1.02) rotate(-1deg);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .block img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+      border-radius: 8px;
+    }
+
+    .block h3 {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .block p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 10px;
+    }
+
+    .block a {
+      display: inline-block;
+      padding: 8px 16px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .block a:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
-    <header>
+  <header>
     <nav>
       <a href="./index.html"><h2 style="text-align: center;">BlitzNoval</h2></a>
     </nav>
   </header>
-<main>
-    <u><h2> Projects I've Worked On </h2></u>
-    <ul>
-    <li><a href="https://peoplesolutionshub.com.au/"> People Solutions Hub</a></li>
+  <main>
+    <u><h2 style="text-align: center;">Projects </h2></u>
+    <div class="block-container">
+      <div class="block">
+        <img src="../../Images/aot.png" alt="People Solutions Hub">
+        <h3>People Solutions Hub</h3>
+        <p>A website for a consulting company.</p>
+        <a href="https://peoplesolutionshub.com.au/">Visit Site</a>
+      </div>
+      <div class="block">
+        <img src="../../Images/luffy.jpg" alt="GitHub">
+        <h3>GitHub</h3>
+        <p>My GitHub profile with my projects.</p>
+        <a href="https://github.com/BlitzNoval">Visit Site</a>
+      </div>
+      <div class="block">
+        <img src="../../Images/nami.jpg" alt="Block 3">
+        <h3>Block 3</h3>
+        <p>Description of Block 3.</p>
+        <a href="#">Link to Block 3</a>
+      </div>
+      <div class="block">
+        <img src="../../Images/aegi.jpeg" alt="Block 4">
+        <h3>Block 4</h3>
+        <p>Description of Block 4.</p>
+        <a href="#">Link to Block 4</a>
+      </div>
+      <div class="block">
+        <img src="../../Images/naruto.png" alt="Block 5">
+        <h3>Block 5</h3>
+        <p>Description of Block 5.</p>
+        <a href="#">Link to Block 5</a>
+      </div>
+      <div class="block">
+        <img src="../../Images/goku.png" alt="Block 6">
+        <h3>Block 6</h3>
+        <p>Description of Block 6.</p>
+        <a href="#">Link to Block 6</a>
+      </div>
+    </div>
+  </main>
+  <footer>
     <br>
-    <li><a href="https://github.com/BlitzNoval"> GitHub </a></li>
-    <br>
-    <li><a href="../../index.html"> Coming Soon... </a></li>
-    </ul>
-</main>
-
-<footer>
-
-    <br> <i style=" text-align: center; opacity: 0.5;"> Brought to you by | LJ Media | © February 2024 </i> </br>
-
-</footer>
-    
+    <i style="text-align: center; opacity: 0.5;">Brought to you by | LJ Media | © February 2024</i>
+  </footer>
 </body>
 </html>
