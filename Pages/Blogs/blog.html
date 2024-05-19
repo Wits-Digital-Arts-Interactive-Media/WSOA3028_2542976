@@ -11,37 +11,124 @@
     
     <title>Blog Posts</title>
     <link rel="stylesheet" href="../../styles.css">
-    <script defer src="../../Scripts/activePage.js"></script>
-    <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Blogposts");</script>
-   </head>
+    <style>
+        /* Style for Timeline with Alternating Sides */
+        .timeline {
+            list-style-type: none;
+            padding: 0;
+            margin: 50px 0;
+            position: relative;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .timeline-date {
+            font-size: 18px;
+            font-weight: bold;
+            width: 100px;
+            text-align: center;
+        }
+
+        .timeline-content {
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .timeline-content h3 {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        .timeline-content a:hover {
+            text-decoration: underline;
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            order: -1;
+        }
+    </style>
+</head>
 <body>
-    <header>
-        <a><h1 style="text-align: center;">Home</h1></a>
-        <hr>
-        <nav>
-          <a><h2 style="text-align: center;">BlitzNoval</h2></a>
-          <!-- .JS Menu -->
-        </nav>
-        <hr>
-      </header>
+  <header>
+    <nav>
+      <a href="./index.html"><h2 class="title">BlitzNoval</h2></a>
+    </nav>
+  </header>
 
     <main>
-        <ul>
-          <li><a href="blog1.html">Blog Post Week 1</a></li>  
-          <li><a href="blog2.html">Blog Post Week 2</a></li>  
-          <li><a href="blog3.html">Blog Post Week 3</a></li>  
-          <li><a href="blog4.html">Blog Post Week 4</a></li>  
-          <li><a href="blog5.html">Blog Post Week 5</a></li>  
-          <li><a href="blog6.html">Blog Post Week 6</a></li>  
-          
-
+        <ul class="timeline">
+            <li class="timeline-item">
+                <div class="timeline-date">Week 1</div>
+                <div class="timeline-content">
+                    <h3>Week 1 Blog Post</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
+                    <a href="../Blogs/blog1.html">Read More</a>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-date">Week 2</div>
+                <div class="timeline-content">
+                    <h3>Week 2 Blog Post</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
+                    <a href="blog2.html">Read More</a>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-date">Week 3</div>
+                <div class="timeline-content">
+                    <h3>Week 3 Blog Post</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
+                    <a href="blog3.html">Read More</a>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-date">Week 4</div>
+                <div class="timeline-content">
+                    <h3>Week 4 Blog Post</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
+                    <a href="blog4.html">Read More</a>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-date">Week 5</div>
+                <div class="timeline-content">
+                    <h3>Week 5 Blog Post</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
+                    <a href="blog5.html">Read More</a>
+                </div>
+            </li>
+            <li class="timeline-item">
+                <div class="timeline-date">Week 6</div>
+                <div class="timeline-content">
+                    <h3>Week 6 Blog Post</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales purus in justo ullamcorper tempor.</p>
+                    <a href="blog6.html">Read More</a>
+                </div>
+            </li>
         </ul>
-        
     </main>
     <footer>
-
-        <br> <i style=" text-align: center; opacity: 0.5;"> Brought to you by | LJ Media | © February 2024 </i> </br>
-    
+        <br><i style="text-align: center; opacity: 0.5;"> Brought to you by | LJ Media | © February 2024 </i></br>
     </footer>
 </body>
 </html>
