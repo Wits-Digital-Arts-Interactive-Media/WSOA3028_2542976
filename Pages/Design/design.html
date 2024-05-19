@@ -4,153 +4,272 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Liam's Index">
-    <meta name="author" content="Liam Moodley"> 
+    <meta name="author" content="Liam Moodley">
     <meta property="og:title" content="Liam Moodley: Web Design">
     <meta property="og:description" content="GateWay to The Internet">
-    <meta property="og:type" content="Base Website"> 
+    <meta property="og:type" content="Base Website">
 
     <title>Design</title>
     <link rel="stylesheet" href="../../styles.css">
     <script defer src="../../Scripts/activePage.js"></script>
     <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Design");</script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            padding: 20px;
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Card animation */
+.animate {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Text animation */
+@keyframes textAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(0);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+    </style>
 </head>
+
+<script>
+    // Function to animate cards on scroll
+    function animateOnScroll() {
+      const cards = document.querySelectorAll('.card');
+      const windowHeight = window.innerHeight;
+  
+      cards.forEach(card => {
+        const cardTop = card.getBoundingClientRect().top;
+  
+        if (cardTop < windowHeight * 0.8) {
+          card.classList.add('animate');
+        } else {
+          card.classList.remove('animate');
+        }
+      });
+    }
+  
+    // Function to animate text on hover
+    function animateTextOnHover() {
+      const cards = document.querySelectorAll('.card');
+  
+      cards.forEach(card => {
+        const text = card.querySelector('p');
+  
+        card.addEventListener('mouseover', () => {
+          text.classList.add('animate-text');
+        });
+  
+        card.addEventListener('mouseout', () => {
+          text.classList.remove('animate-text');
+        });
+      });
+    }
+  
+    // Text animation
+    const animateText = document.querySelectorAll('.animate-text');
+  
+    animateText.forEach(text => {
+      text.style.animation = 'textAnimation 1s infinite';
+    });
+  
+    // Call the functions on page load and scroll
+    window.addEventListener('load', animateOnScroll);
+    window.addEventListener('scroll', animateOnScroll);
+    window.addEventListener('load', animateTextOnHover);
+  </script>
+
 <body>
     <header>
-        <a><h1 style="text-align: center;">Home</h1></a>
-        <hr>
         <nav>
-          <a><h2 style="text-align: center;">BlitzNoval</h2></a>
-          <!-- .JS Menu -->
+            <a href="./index.html"><h2 class="title">BlitzNoval</h2></a>
+        
         </nav>
-        <hr>
-      </header>
+    </header>
 
-    <h2> Font & Color Choices</h2>
-    I'm really into the idea of crafting a super modern website. I'm all about that flow where everything just clicks together
-     – from the vibrant colors playing off each other to the fonts that perfectly complement the vibe. Right now, I'm in that sweet spot of exploration, seeing what works and what doesn't. But I gotta say, I'm liking where I'm at with it all.
+    <main>
+        <section class="card">
+            <h2>Font & Color Choices</h2>
+            <p>I'm really into the idea of crafting a super modern website. I'm all about that flow where everything just clicks together – from the vibrant colors playing off each other to the fonts that perfectly complement the vibe. Right now, I'm in that sweet spot of exploration, seeing what works and what doesn't. But I gotta say, I'm liking where I'm at with it all.</p>
+        </section>
 
-    <h2> Style </h2>
-    Minimalism? Oh yeah, that's totally my jam. I'm all about keeping things clean and sleek, stripping away the excess to focus on what really matters. But here's the thing – I don't want to sacrifice excitement for simplicity. Finding that sweet spot where minimalism meets creativity is my goal. And you know what? I'm all for exploring different avenues, not just sticking to one medium. Mixing things up keeps it fresh and adds layers to my academic work.
+        <section class="card">
+            <h2>Style</h2>
+            <p>Minimalism? Oh yeah, that's totally my jam. I'm all about keeping things clean and sleek, stripping away the excess to focus on what really matters. But here's the thing – I don't want to sacrifice excitement for simplicity. Finding that sweet spot where minimalism meets creativity is my goal. And you know what? I'm all for exploring different avenues, not just sticking to one medium. Mixing things up keeps it fresh and adds layers to my academic work.</p>
+        </section>
 
-    <h2> Approach </h2>
-    I feel like a good approach to this all is to create color palettes to keep track of it all. So in  <a href="../Blogs/blog3.html">Blog Post Week 3</a>, you can check it out! I show alot more of my process here.
+        <section class="card">
+            <h2>Approach</h2>
+            <p>I feel like a good approach to this all is to create color palettes to keep track of it all. So in <a href="../Blogs/blog3.html">Blog Post Week 3</a>, you can check it out! I show a lot more of my process here.</p>
+        </section>
+        <section class="card">
+            <h2>Font & Color Choices</h2>
+            <p>I'm really into the idea of crafting a super modern website. I'm all about that flow where everything just clicks together – from the vibrant colors playing off each other to the fonts that perfectly complement the vibe. Right now, I'm in that sweet spot of exploration, seeing what works and what doesn't. But I gotta say, I'm liking where I'm at with it all.</p>
+        </section>
 
+        <section class="card">
+            <h2>Style</h2>
+            <p>Minimalism? Oh yeah, that's totally my jam. I'm all about keeping things clean and sleek, stripping away the excess to focus on what really matters. But here's the thing – I don't want to sacrifice excitement for simplicity. Finding that sweet spot where minimalism meets creativity is my goal. And you know what? I'm all for exploring different avenues, not just sticking to one medium. Mixing things up keeps it fresh and adds layers to my academic work.</p>
+        </section>
 
-    <h2> Code Break Down </h2>
-    <h2 style="text-align: center;"> Highlighting My Code Process & Logic </h2>
+        <section class="card">
+            <h2>Approach</h2>
+            <p>I feel like a good approach to this all is to create color palettes to keep track of it all. So in <a href="../Blogs/blog3.html">Blog Post Week 3</a>, you can check it out! I show a lot more of my process here.</p>
+        </section>
 
+        <section class="card">
+            <h2>Font & Color Choices</h2>
+            <p>I'm really into the idea of crafting a super modern website. I'm all about that flow where everything just clicks together – from the vibrant colors playing off each other to the fonts that perfectly complement the vibe. Right now, I'm in that sweet spot of exploration, seeing what works and what doesn't. But I gotta say, I'm liking where I'm at with it all.</p>
+        </section>
 
-    <h3><u><b> HTML  </b></u></h3>
-    <p> Key Points:
-        <ul>
-            <li> Metadata: The *head* section contains all my metadata. Including my viewport , settings , information about the author and 
-                a character set.</li>
-                <li> Styling I have in place the framework for my CSS filing </li>
-                <li> Script I have my script.js where it imports the Javascript module and inialises it with the function initialise (Then the Page It Is On) </li>
-                <li> Structure The page has a nav menu (the old one is commented out due to the updated javascript) , a dynamically generated menu container , the main content section and then my footer. </li>
-            </ul>  </p>
-    <p> Code Structure: 
-        <ul> 
-                <li> DOCTYPE html Declares the document type and version of HTML. </li>
-                <li> html lang="en" Defines the document language as English.</li>
-                <li> head: Contains metadata and references to external resources. </li>
-                <li> title Home Page title : Sets the title of the webpage. </li>
-                <li> link rel="stylesheet" href="styles.css">: Links an external CSS file for styling.</li>
-                <li> script type="module">... script : Imports a JavaScript module and initializes it.</li>
-                <li> body Contains the visible content of the webpage.</li> 
-        </ul> 
-    </p>
+        <section class="card">
+            <h2>Style</h2>
+            <p>Minimalism? Oh yeah, that's totally my jam. I'm all about keeping things clean and sleek, stripping away the excess to focus on what really matters. But here's the thing – I don't want to sacrifice excitement for simplicity. Finding that sweet spot where minimalism meets creativity is my goal. And you know what? I'm all for exploring different avenues, not just sticking to one medium. Mixing things up keeps it fresh and adds layers to my academic work.</p>
+        </section>
 
-    <h3><u><b> Javascript </b></u></h3>
-    <p> Key Points: 
-        <ul>
-            <li> Root Path: The root constant stores the base path of the website, which is used as a prefix for all page URLs.</li>
-            <li> Pages Array: The pages array contains objects representing different pages with their names and relative URLs.</li>
-            <li> Navigation Initialization Function: The initialise function dynamically generates a navigation menu based on the provided page data.</li>
-        </ul>
-    </p>
+        <section class="card">
+            <h2>Approach</h2>
+            <p>I feel like a good approach to this all is to create color palettes to keep track of it all. So in <a href="../Blogs/blog3.html">Blog Post Week 3</a>, you can check it out! I show a lot more of my process here.</p>
+        </section>
 
-    <p> Code Structure: 
-        <ul> 
-                <li> The code begins by defining the root constant, which holds the base path of the website. </li>
-                <li> Following that, an array named pages is declared, containing objects representing various pages with their names and URLs.</li>
-                <li> Finally, an initialise function is exported, which dynamically creates a navigation menu based on the provided page information. </li>
-                <li> It is my approach to dynamically generating a navigation menu based on a predefined list of pages.</li>
-                <li> By leveraging the initialise function, I use it to create a set of interactive navigation elements that enhance user navigation within a website.</li>
-        </ul> 
-    </p>
-
-    <h3><u><b> Tags Used </b></u></h3>
-    <p> Page Tag Format
-        <ul>
-            <li>!DOCTYPE html</li>
-    <li>html</li>
-    <li>head
-        <ul>
-            <li>meta</li>
-            <li>title</li>
-            <li>link</li>
-            <li>script</li>
-            <li>script</li>
-        </ul>
-    </li>
-    <li>body
-        <ul>
-            <li>header
-                <ul>
-                    <li>h1</li>
-                    <li>h2</li>
-                    <li>nav</li>
-                </ul>
-            </li>
-            <li>p</li>
-            <li>img</li>
-            <li>br</li>
-            <li>button</li>
-            <li>a</li>
-            <li>h3</li>
-            <li>i</li>
-            <li>ul
-                <ul>
-                    <li>li</li>
-                    <li>li</li>
-                    <li>li</li>
-                </ul>
-            </li>
-            <li>footer</li>
-        </ul>
-    </li>
-    <li>/body</li>
-    <li>/html</li>
+        <section class="card">
+            <h2>Code Break Down</h2>
+            <h3>HTML</h3>
+            <p>Key Points:</p>
+            <ul>
+                <li>Metadata: The *head* section contains all my metadata, including my viewport settings, information about the author, and a character set.</li>
+                <li>Styling: I have in place the framework for my CSS filing.</li>
+                <li>Script: I have my script.js where it imports the Javascript module and initializes it with the function initialise (then the page it is on).</li>
+                <li>Structure: The page has a nav menu, a dynamically generated menu container, the main content section, and then my footer.</li>
             </ul>
-    </p>
+        </section>
 
-    <p> Code Structure: 
-        <ul> 
-                <li> All tags are consistent and relative on every single page. </li>
-                <li> All tag formatting is streamlined and effecient on every page. </li>
-                <li> I did this so when I have to create a new page I canjust copy and paste it and go about my day. </li>
-                <li> It is my approach to dynamically creating formatting off of predefined logic</li>
-       </ul> 
-    </p>
+        <section class="card">
+            <h3>Javascript</h3>
+            <p>Key Points:</p>
+            <ul>
+                <li>Root Path: The root constant stores the base path of the website, which is used as a prefix for all page URLs.</li>
+                <li>Pages Array: The pages array contains objects representing different pages with their names and relative URLs.</li>
+                <li>Navigation Initialization Function: The initialise function dynamically generates a navigation menu based on the provided page data.</li>
+            </ul>
+        </section>
 
-    <h2> Issues & Future Fixes </h2>
+        
+        <section class="card">
+            <h2>Issues & Future Fixes</h2>
+            <ul>
+                <li>ALL PAGES: On all the pages there is the words "More (Drop Down Menu)". This is intentional to mark where I want my drop-down menu to be. It has not been implemented as of yet but I am leaving it there to show what I want my menu to look like and where I want it to be. -- not fixed</li>
+                <li>Blog Post buttons position feels off and you cannot click the button, you have to click the URL text -- not fixed</li>
+                <li>Portfolio Page has no content and needs to fix the coming soon link -- not fixed</li>
+                <li>Index Page image not showing, and alt text not showing either -- fixed (10/05/2024 14:40)</li>
+            </ul>
+        </section>
+    </main>
 
-    <ul> 
-        <li> ALL PAGES: On all the pages there is the words "More (Drop Down Menu)". This is intentional to mark where I want my drop down menu to be, it has nto been implemented as of yet 
-            but I am leaving it there to show what I want my menu to look like and where I want it to be. -- not fixed </li>
-        <li> Blog Post buttons position feels off and you cannot cLick the button you have to click the url text -- not fixed  </li>
-        <li> Portoflio Page has no content , and need to fix the coming soon link -- not fixed </li>
-        <li> Index Page image not showing , and alt text not showing either -- fixed (10/05/2024 14:40)  </li>
-   
-   
-    </ul>
-
-<footer>
-
-    <br> <i style=" text-align: center; opacity: 0.5;"> Brought to you by | LJ Media | © February 2024 </i> </br>
-
-</footer>
-    
+    <footer>
+        <br><i style="text-align: center; opacity: 0.5;">Brought to you by | LJ Media | © February 2024</i><br>
+    </footer>
 </body>
 </html>
