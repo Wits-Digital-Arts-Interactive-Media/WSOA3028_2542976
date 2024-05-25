@@ -4,19 +4,12 @@ const pages = [
   {
     name: "Portfolio",
     href: `${root}/Pages/Portfolio/portfolio.html`,
-    subPages: [
-      { name: "People Solutions Hub", href: `https://peoplesolutionshub.com.au/` },
-      { name: "GitHub", href: `https://github.com/Wits-Digital-Arts-Interactive-Media/WSOA3028_2542976` }
-    ]
-  },
+      },
 
   { 
     name: "About Me", 
     href: `${root}/Pages/About Me/about.html`,
-    subPages: [
-    { name: "About Me", href: `${root}/Pages/About Me/about.html` },
-    { name: "Contact Page", href: `${root}/Pages/About Me/about.html` },
-    ]
+    
   },
 
   { name: "Essays", href: `${root}/Pages/Essays/essay.html` },
