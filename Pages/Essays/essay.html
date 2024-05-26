@@ -1,51 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Liam's Index">
-  <meta name="author" content="Liam Moodley">
-  <meta property="og:title" content="Liam Moodley: Web Design">
-  <meta property="og:description" content="Gateway to The Internet">
-  <meta property="og:type" content="Base Website">
-  <title>Essays</title>
-  <link rel="stylesheet" href="../../styles.css">
-  <link rel="stylesheet" href="styles.css">
-  <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Essays");</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Liam's Index">
+    <meta name="author" content="Liam Moodley">
+    <meta property="og:title" content="Liam Moodley: Web Design">
+    <meta property="og:description" content="Gateway to The Internet">
+    <meta property="og:type" content="Base Website">
+    <title>Essays</title>
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="../../styles/essay.css">
+    <script type="module">
+        import {initialise} from "/WSOA3028_2542976/Scripts/script.js";
+        initialise("Essays");
+    </script>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="./index.html"><h2 class="title">BlitzNoval</h2></a>
-    </nav>
-  </header>
+    <header>
+        <nav>
+            <a href="./index.html"><h2 class="title">BlitzNoval</h2></a>
+        </nav>
+    </header>
+    <main>
+        <h1> Essays </h1>
+        <div class="site-card">
+            <a href="https://tinyurl.com/LJGoogleDrive">
+                <h2>Google Drive</h2>
+                <p>Access all essays conveniently in Google Drive for easier readability.</p>
+            </a>
+            <div class="card-buttons">
+                <button onclick="window.location.href='https://tinyurl.com/LJGoogleDrive'">
+                    <i class="fas fa-external-link-alt"></i> Go to Drive
+                </button>
+            </div>
+        </div>
+        <div class="site-card">
+            <a href="WSOA3028_2542976_Liam Moodley_Essay 1.pdf" target="_blank">
+                <h2>Essay 1</h2>
+                <p>Read Essay 1 by Liam Moodley</p>
+            </a>
+            <div class="card-buttons">
+                <button onclick="window.location.href='WSOA3028_2542976_Liam Moodley_Essay 1.pdf'" download>
+                    <i class="fas fa-download"></i> Download
+                </button>
+                <button onclick="window.open('WSOA3028_2542976_Liam Moodley_Essay 1.pdf', '_blank')">
+                    <i class="fas fa-book-open"></i> Read
+                </button>
+                <button onclick="embedPdf('WSOA3028_2542976_Liam Moodley_Essay 1.pdf')">
+                    <i class="fas fa-eye"></i> View In Site 
+                </button>
+            </div>
+        </div>
+        <!-- Add more site-card links for additional essays -->
+        <div id="pdf-container" class="pdf-container">
+            <button onclick="closePdf()" class="close-button">Close</button>
+            <div id="pdf-embed" class="pdf-embed"></div>
+        </div>
+    </main>
+    <footer>
+        <p class="footer-text">Brought to you by | LJ Media | © February 2024</p>
+    </footer>
 
-  <main>
-    <h1> Essays </h1>
-    <div class="site-card">
-      <a href="https://tinyurl.com/LJGoogleDrive">
-        <h2>Google Drive</h2>
-        <p>Access all essays conveniently in Google Drive for easier readability.</p>
-      </a>
-      <div class="card-buttons">
-        <button onclick="window.location.href='https://tinyurl.com/LJGoogleDrive'">Go to Drive</button>
-      </div>
-    </div>
-    <div class="site-card">
-      <a href="WSOA3028_2542976_Liam Moodley_Essay 1.pdf" target="_blank">
-        <h2>Essay 1</h2>
-        <p>Read Essay 1 by Liam Moodley</p>
-      </a>
-      <div class="card-buttons">
-        <button <a href="WSOA3028_2542976_Liam Moodley_Essay 1.pdf" class="download-link" download>Download</a> </button>
-        <button onclick="window.open('WSOA3028_2542976_Liam Moodley_Essay 1.pdf', '_blank')">Read</button>
-      </div>
-    </div>
-    <!-- Add more site-card links for additional essays -->
-  </main>
+    <script>
+        function embedPdf(url) {
+            const pdfContainer = document.getElementById('pdf-container');
+            const pdfEmbed = document.getElementById('pdf-embed');
+            pdfContainer.style.display = 'block';
+            pdfEmbed.innerHTML = `<embed src="${url}" type="application/pdf" width="100%" height="100%">`;
+        }
 
-  <footer>
-    <p class="footer-text">Brought to you by | LJ Media | © February 2024</p>
-  </footer>
+        function closePdf() {
+            const pdfContainer = document.getElementById('pdf-container');
+            const pdfEmbed = document.getElementById('pdf-embed');
+            pdfContainer.style.display = 'none';
+            pdfEmbed.innerHTML = '';
+        }
+    </script>
 </body>
 </html>

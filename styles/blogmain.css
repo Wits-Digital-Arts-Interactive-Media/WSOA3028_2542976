@@ -4,11 +4,15 @@ body {
 }
 
 .timeline {
-    list-style-type: none;
-    padding: 0;
-    margin: 50px 0;
-    position: relative;
+  list-style-type: none;
+  padding: 0;
+  margin: 50px auto; /* Center the timeline horizontally */
+  position: relative;
+  display: flex; /* Use flexbox */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
 }
+
 
 .timeline-item {
     display: flex;
@@ -70,6 +74,7 @@ body {
 .timeline-item:nth-child(even) .timeline-content {
     order: -1;
 }
+
 
 /* Stylized Line */
 .line {

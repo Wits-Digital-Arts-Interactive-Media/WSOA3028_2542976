@@ -16,32 +16,13 @@ const pages = [
   {
     name: "Blogposts",
     href: `${root}/Pages/Blogs/blog.html`,
-    subPages: [
-      { name: "Blog 1", href: `${root}/Pages/Blogs/blog1.html` },
-      { name: "Blog 2", href: `${root}/Pages/Blogs/blog2.html` },
-      { name: "Blog 3", href: `${root}/Pages/Blogs/blog3.html` },
-      { name: "Blog 4", href: `${root}/Pages/Blogs/blog4.html` },
-      { name: "Blog 5", href: `${root}/Pages/Blogs/blog5.html` },
-      { name: "Blog 6", href: `${root}/Pages/Blogs/blog6.html` },
-      { name: "Blog 7", href: `${root}/Pages/Blogs/blog7.html` },
-      { name: "Blog 8", href: `${root}/Pages/Blogs/blog8.html` }
-    ]
+    
   },
   { name: "Design", href: `${root}/Pages/Design/design.html` },
   {
     name: "Playground",
     href: `${root}/Pages/TheHub/playground.html`,
-    subPages: [
-      {
-        name: "Quote Generator",
-        href: `${root}/Pages/TheHub/playground.html`,
-              },
-      {
-        name: "Sub-menu 2",
-        href: `${root}/Pages/TheHub/submenu2.html`,
-        
-      }
-    ]
+    
   }
 ];
 
