@@ -1,0 +1,76 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  
+  
+  /* Card Styles */
+  article {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  section {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Button Styles */
+  .card-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+  
+  .card-buttons button {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    margin: 0 320px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 13px;
+  }
+  
+  .card-buttons button a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-buttons button a i {
+    margin-right: 5px;
+  }
+  
+  .card-buttons button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Footer Styles */
+  footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    color: #999;
+  }
