@@ -1,0 +1,36 @@
+body {
+    background-color: #f0f0f000;
+    padding: 20px; /* Adding padding to prevent elements from reaching the edges */
+}
+
+.container {
+    max-width: 800px; /* Limiting width to prevent spanning the entire page */
+    margin: 0 auto; /* Centering the container */
+}
+
+table {
+    width: 100%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.pros {
+    background-color: #60ac64b8; 
+}
+
+.con {
+    background-color: #ffcdd2; 
+}
