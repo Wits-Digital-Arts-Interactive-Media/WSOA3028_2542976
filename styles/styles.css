@@ -185,14 +185,14 @@ body {
   }
   .typing-animation {
     display: inline-block;
-    border-right: 2px solid;
+    border-right: 10px solid;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
   }
   @keyframes typing {
     from { width: 0%; }
-    to { width: 84%; }
+    to { width: 59%; }
   }
   @keyframes blink-caret {
     from, to { border-color: transparent; }
