@@ -1,49 +1,90 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
 .block-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px; /* Increased gap for more white space */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
   padding: 20px;
 }
 
 .block {
   background-color: #fff;
-  border: 2px solid #333;
+  border: 3px solid #333;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
   text-align: center;
-  transition: box-shadow 0.3s ease;
-  text-decoration: none; /* Ensures no underline on hover */
-  color: inherit; /* Inherit color */
-  overflow: hidden; /* Ensures no overflow of images */
+  transition: transform 0.9s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
 }
 
 .block:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: rotate(-3deg) translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .image-container {
   overflow: hidden;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.block img {
+.block img, .block iframe {
   width: 100%;
   height: auto;
-  transition: transform 0.3s ease;
+  transition: transform 0.9s ease;
 }
 
-.block:hover img {
-  transform: scale(1.1); /* Ensures image scales within the card */
+.block:hover img, .block:hover iframe {
+  transform: scale();
 }
 
 .block h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
 }
 
 .block p {
-  font-size: 14px;
+  font-size: 1em;
   color: #666;
   margin-bottom: 10px;
+}
+
+footer {
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 20px;
+  padding: 10px 0;
+  background-color: #333;
+  color: #000000;
 }

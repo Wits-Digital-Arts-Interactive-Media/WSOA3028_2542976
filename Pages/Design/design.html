@@ -219,5 +219,22 @@
         
         <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
       </footer>
+      <script>
+    // Scroll to Top Button Script
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 </html>

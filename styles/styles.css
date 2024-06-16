@@ -1,10 +1,10 @@
 body {
     background-color: #ffffff;
-    margin: 0; 
-    padding: 0; 
-    overflow-x: hidden; 
-    font-family: Arial, Helvetica, sans-serif;
-     /* Prevents scrollbars from appearing */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 /* TEXT FORMATTING */
@@ -14,8 +14,9 @@ h1, h2, a {
 
 h1 {
     text-align: center;
-    font-size: 8em;
+    font-size: 6em;
     margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 h2 {
@@ -24,8 +25,8 @@ h2 {
 }
 
 hr {
-    width: 100%; 
-    margin: 20px 0; 
+    width: 100%;
+    margin: 20px 0;
     border: none;
     height: 1px;
     background-color: #000000;
@@ -35,6 +36,7 @@ hr {
 .container {
     text-align: center;
     margin-top: 100px;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .quote {
@@ -72,27 +74,30 @@ a {
 }
 
 a:hover {
-    color: #ff0000;
+    color: #945e00;
 }
 
 /* DYNAMIC MENU */
 .current-page {
     font-size: 1.125em;
     font-weight: bold;
-    border-bottom: 2px solid #000000; 
-    color: #ff0000; 
+    border-bottom: 2px solid #000000;
+    color: #ff0000;
 }
 
 /* NAVIGATION MENU */
 nav {
-    display: flex; 
-    align-items: center; 
-    justify-content: space-between; 
-    width: 100%; 
+    display: flex;
+    justify-content: center;
+    width: 100%;
     padding: 10px 20px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     background-color: #ffffff;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
 }
 
 nav ul {
@@ -104,6 +109,7 @@ nav ul {
 
 nav ul li {
     position: relative;
+    margin: 0 10px;
 }
 
 nav ul li a {
@@ -111,11 +117,21 @@ nav ul li a {
     padding: 10px 15px;
     color: #000000;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+nav ul li a.current-page {
+    border: 0px solid #000000;
+    border-radius: 50px;
+    background-color: #945e00c7;
+    color: #ffffff;
 }
 
 nav ul li a:hover {
-    color: #ff0000;
+    color: #ffffff;
+    background-color: #945e00;
 }
 
 /* Dropdown menu */
@@ -148,94 +164,85 @@ nav ul li:hover > ul {
     visibility: visible;
 }
 
-/* VIDEO CSS 
-#bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -2; 
-}
-
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-    z-index: -1; 
-}
-
-*/
-
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2em;
 }
 
-body {
-    transition: background-color 0.5s, color 0.5s;
-  }
-  .welcome-section {
+.welcome-section {
     text-align: center;
     padding: 50px;
-  }
-  .typing-animation {
+}
+
+.typing-animation {
     display: inline-block;
     border-right: 10px solid;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
-  }
-  @keyframes typing {
+}
+
+@keyframes typing {
     from { width: 0%; }
     to { width: 59%; }
-  }
-  @keyframes blink-caret {
+}
+
+@keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: black; }
-  }
-  #particles-js {
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#particles-js {
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: -20;
-  }
-  html {
+}
+
+html {
     scroll-behavior: smooth;
-  }
+}
 
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
 
-    body {
-      margin: 0;
-      padding: 0;
-       /* Prevents scrollbars from appearing */
-      background: #ffffff; /* Match the theme color */
-    }
+footer {
+    margin-top: 500px; /* Increased spacing */
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    opacity: 0.7;
+}
 
-    canvas {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -2; /* Place the canvas behind other elements */
-    }
+/* Scroll to Top Button */
+#scroll-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    background-color: #ff0008;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-
-    
-
-      
-      
-      
-      
-      
-      
-     
-
-    
+#scroll-top-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}

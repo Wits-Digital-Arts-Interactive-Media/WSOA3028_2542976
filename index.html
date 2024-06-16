@@ -16,21 +16,37 @@
     initialise("Index");
   </script>
 </head>
-<body style="overflow: hidden;">
+<body>
   <header>
-    <nav>
-      <a href="./index.html"><h2 style="text-align: center;">BlitzNoval</h2></a>
-    </nav>
+    <nav></nav>
   </header>
   <div class="container">
-    <h1 class="typing-animation" id="typing-text">Hey , I'm Liam :) </h1>
+    <h1 class="typing-animation" id="typing-text">Hey, I'm Liam :)</h1>
     <p>Welcome to my Portfolio. I'm a passionate web designer. Explore my work and get to know me better.</p>
     <canvas id="particle-canvas"></canvas>
   </div>
 
+  <button id="scroll-top-btn" onclick="scrollToTop()">Top</button>
+
   <footer>
-        
-    <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
+    <p style="text-align: center; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
   </footer>
+  <script>
+    // Scroll to Top Button Script
+    const scrollTopBtn = document.getElementById('scroll-top-btn');
+
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        scrollTopBtn.style.display = "block";
+      } else {
+        scrollTopBtn.style.display = "none";
+      }
+    };
+
+    function scrollToTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
 </body>
 </html>

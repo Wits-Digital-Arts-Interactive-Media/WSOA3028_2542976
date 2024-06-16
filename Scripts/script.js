@@ -1,33 +1,16 @@
 const root = "/WSOA3028_2542976";
 const pages = [
   { name: "Index", href: `${root}/index.html` },
-  {
-    name: "Portfolio",
-    href: `${root}/Pages/Portfolio/portfolio.html`,
-      },
-
-  { 
-    name: "About Me", 
-    href: `${root}/Pages/About Me/about.html`,
-    
-  },
-
+  { name: "Portfolio", href: `${root}/Pages/Portfolio/portfolio.html` },
+  { name: "About Me", href: `${root}/Pages/About Me/about.html` },
   { name: "Essays", href: `${root}/Pages/Essays/essay.html` },
-  {
-    name: "Blogposts",
-    href: `${root}/Pages/Blogs/blog.html`,
-    
-  },
+  { name: "Blogposts", href: `${root}/Pages/Blogs/blog.html` },
   { name: "Design", href: `${root}/Pages/Design/design.html` },
-  {
-    name: "Playground",
-    href: `${root}/Pages/TheHub/playground.html`,
-    
-  }
+  { name: "Playground", href: `${root}/Pages/TheHub/playground.html` }
 ];
 
 export function initialise(currentPageName) {
-  const nav = document.querySelector("header > nav");
+  const nav = document.querySelector("header nav");
   const ul = document.createElement("ul");
 
   pages.forEach(page => {
@@ -38,6 +21,7 @@ export function initialise(currentPageName) {
       anchor.classList.add('current-page');
     } else {
       anchor.setAttribute('href', page.href);
+      anchor.setAttribute('onclick', 'window.location.reload()');
     }
     li.appendChild(anchor);
 
@@ -71,6 +55,3 @@ export function initialise(currentPageName) {
 
   nav.appendChild(ul);
 }
-
-//ACTIVE PAGE JAVA SINCE I CANT INITIALISE IT IN THE OTHER SCRIPT
-
