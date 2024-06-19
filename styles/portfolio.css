@@ -2,31 +2,90 @@ body {
   font-family: Arial, sans-serif;
 }
 
-h1 {
-  text-align: left;
-  margin: 20px;
+
+.scroller {
+  max-width: 2000px;
 }
+
+.scroller__inner {
+  padding-block: 0.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 0.1%, white 99.9%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+.scroller[data-direction="left"] {
+  --_animation-direction: forwards;
+}
+
+.scroller[data-speed="fast"] {
+  --_animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 60s;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+
 
 .filters {
   margin: 20px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .filter-btn {
+  
   margin-right: 10px;
-  padding: 10px 15px;
+  padding: 10px 25px;
   border: none;
-  background-color: #eee;
+  background-color: #000000;
+  color: white; /* Set button text color to white */
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 2px;
   transition: background-color 0.3s;
+  font-size: 15px;
 }
 
 .filter-btn:hover {
-  background-color: #ccc;
+  background-color: #9d1c1c;
+  color: rgb(255, 255, 255); /* Change text color on hover */
 }
 
 .filter-btn.active {
-  background-color: #ccc;
+  background-color: #9d1c1c;
+  color: white; /* Ensure text color stays white when active */
   font-weight: bold;
 }
 
@@ -67,7 +126,7 @@ h1 {
 }
 
 .block:hover .image-container img {
-  filter: brightness(1.2);
+  filter: brightness(1.05); /* Subtle hover effect */
 }
 
 .block h3 {
@@ -80,10 +139,4 @@ h1 {
   font-style: italic;
   margin: 5px 0 0 0;
   text-align: left;
-}
-
-
-.filter-btn.active {
-  background-color: #0011ff58;
-  font-weight: bold;
 }

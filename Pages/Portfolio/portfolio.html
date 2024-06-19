@@ -23,12 +23,31 @@
     </nav>
   </header>
   <main>
-    <h1>Portfolio</h1>
+    <div class="scroller" data-direction="left" data-speed="slow">
+      <div class="scroller__inner"></div>
+      <div class="scroller" data-speed="slow">
+        <ul class="tag-list scroller__inner">
+          <h1><li><u> Portfolio </u>  </li></h1>     
+          <h1><li><u> Portfolio </u>  </li></h1>       
+          <h1><li><u> Portfolio </u>  </li></h1>       
+          <h1><li><u> Portfolio </u>  </li></h1>     
+          <h1><li><u> Portfolio </u>  </li></h1>       
+          <h1><li><u> Portfolio </u>  </li></h1>          
+          <h1><li><u> Portfolio </u>  </li></h1>     
+          <h1><li><u> Portfolio </u>  </li></h1>       
+          <h1><li><u> Portfolio </u>  </li></h1>       
+          <h1><li><u> Portfolio </u>  </li></h1>     
+          <h1><li><u> Portfolio </u>  </li></h1>       
+          <h1><li><u> Portfolio </u>  </li></h1>           
+        </ul>
+      </div>
+    </div>
     <div class="filters">
+      <button class="filter-btn" data-filter="all"> All</button>
       <button class="filter-btn" data-filter="games">Games</button>
       <button class="filter-btn" data-filter="work">Work</button>
       <button class="filter-btn" data-filter="misc">Misc.</button>
-      <button class="filter-btn" data-filter="all"> All</button>
+      
     </div>
     <div class="block-container">
       <a href="https://peoplesolutionshub.com.au/" class="block" data-tag="work">
@@ -59,18 +78,18 @@
         <h3>Clone Zone</h3>
         <p><em>Games</em></p>
       </a>
-      <a href="https://youtu.be/Xu7osF5fqSk?si=wS2zrhDyQkEgFMlj" class="block" data-tag="games">
+      <a href="https://youtu.be/Xu7osF5fqSk?si=wS2zrhDyQkEgFMlj" class="block" data-tag="misc">
         <div class="image-container">
-          <img src="../../Images/skate.jpg" alt="The Ramp">
+          <img src="../../Images/skate.jpg" alt="The Ramp Youtube Video">
         </div>
         <h3>The Ramp</h3>
         <p><em>Games</em></p>
       </a>
-      <a href="https://peoplesolutionshub.com.au/" class="block" data-tag="work">
+      <a href="https://www.youtube.com/@ljaymode6044" class="block" data-tag="misc">
         <div class="image-container">
-          <img src="../../Images/nami.jpg" alt="People Solutions Hub">
+          <img src="../../Images/i.jpg" alt="Youtube">
         </div>
-        <h3>People Solutions Hub</h3>
+        <h3>Youtube</h3>
         <p><em>Work</em></p>
       </a>
       <a href="https://github.com/BlitzNoval" class="block" data-tag="work">
@@ -89,9 +108,9 @@
       </a>
       <a href="#" class="block" data-tag="misc">
         <div class="image-container">
-          <img src="../../Images/moviess.jpg" alt="Online Movie List">
+          <img src="../../Images/moviess.jpg" alt="Movie Catalog">
         </div>
-        <h3>Online Movie List</h3>
+        <h3>Movie Catalog</h3>
         <p><em>Misc.</em></p>
       </a>
      
@@ -134,6 +153,35 @@
         });
       });
     });
+  </script>
+  <script>
+    const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+
   </script>
 </body>
 </html>

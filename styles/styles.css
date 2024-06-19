@@ -106,7 +106,7 @@ nav {
     margin: 0 auto;
     padding: 12px 32px; /* Slightly increased padding for a more spacious feel */
     box-sizing: border-box;
-    background-color: #0000003b; /* Softer background color for a more modern look */
+    background-color: #000000; /* Softer background color for a more modern look */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 200px;  /* Moderately rounded edges */
     transition: box-shadow 0.3s;
@@ -129,17 +129,17 @@ nav ul {
 /* List item styles */
 nav ul li {
     position: relative;
-    padding-bottom: 4px; /* Space for the dot */
+    padding-bottom: 1px; /* Space for the dot */
 }
 
 nav ul li a::after {
     content: '';
     position: absolute;
-    left: 50%;
-    bottom: -30%;
+    left: 10%;
+    bottom: 42%;
     transform: translateX(-50%);
-    width: 6px; /* Size of the dot */
-    height: 6px;
+    width: 8px; /* Size of the dot */
+    height: 8px;
     background-color: transparent;
     border-radius: 50%;
     transition: background-color 0.3s, transform 0.3s;
@@ -147,7 +147,7 @@ nav ul li a::after {
 
 nav ul li a:hover::after,
 nav ul li a.current-page::after {
-    background-color: #007bff5e; /* Color of the dot */
+    background-color: #000000; /* Color of the dot */
     transform: translateX(-50%) scale(1.2); /* Slightly enlarge the dot */
 }
 
@@ -166,15 +166,15 @@ nav ul li a {
 
 /* Link hover styles */
 nav ul li a:hover {
-    color: #ffffff;
-    background-color: #007bff; /* Primary color for hover effect */
+    color: #000000;
+    background-color: #ffffff; /* Primary color for hover effect */
     transform: translateY(-2px); /* Subtle lift on hover */
 }
 
 /* Selected link styles */
 nav ul li a.current-page {
-    color: #ffffff;
-    background-color: #0056b3; /* Darker primary color for selected item */
+    color: #000000;
+    background-color: #ffffff; /* Darker primary color for selected item */
     transform: translateY(-2px); /* Consistent lift for selected item */
 }
 
