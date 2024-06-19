@@ -19,61 +19,121 @@
 <body>
   <header>
     <nav>
-     
+      <!-- Navigation content can go here -->
     </nav>
   </header>
   <main>
-    <h1>Portfolio Of Things</h1>
+    <h1>Portfolio</h1>
+    <div class="filters">
+      <button class="filter-btn" data-filter="games">Games</button>
+      <button class="filter-btn" data-filter="work">Work</button>
+      <button class="filter-btn" data-filter="misc">Misc.</button>
+      <button class="filter-btn" data-filter="all"> All</button>
+    </div>
     <div class="block-container">
-      <a href="https://peoplesolutionshub.com.au/" class="block">
+      <a href="https://peoplesolutionshub.com.au/" class="block" data-tag="work">
         <div class="image-container">
           <img src="../../Images/nami.jpg" alt="People Solutions Hub">
         </div>
         <h3>People Solutions Hub</h3>
-        <p>A website for a consulting company.</p>
+        <p><em>Work</em></p>
       </a>
-      <a href="https://github.com/BlitzNoval/FINALCLONEZONE" class="block">
+      <a href="https://ljeezy.itch.io/" class="block" data-tag="games">
         <div class="image-container">
-          <img src="../../Images/clone.png" alt="Clone Zone">
+          <img src="../../Images/itch.jpg" alt="Itch.Io">
+        </div>
+        <h3>Itch.Io</h3>
+        <p><em>Work</em></p>
+      </a>
+      <a href="https://open.spotify.com/user/821mqkvmeyejggewr9sm39vk0?si=01613387786d43f7" class="block" data-tag="misc">
+        <div class="image-container">
+          <img src="../../Images/music.jpg" alt="Spotify">
+        </div>
+        <h3>Spotify</h3>
+        <p><em>Work</em></p>
+      </a>
+      <a href="https://github.com/BlitzNoval/FINALCLONEZONE" class="block" data-tag="games">
+        <div class="image-container">
+          <img src="../../Images/clones.jpg" alt="Clone Zone">
         </div>
         <h3>Clone Zone</h3>
-        <p>The player is using clones to complete it.</p>
+        <p><em>Games</em></p>
       </a>
-      <a href="https://youtu.be/Xu7osF5fqSk?si=wS2zrhDyQkEgFMlj" class="block">
+      <a href="https://youtu.be/Xu7osF5fqSk?si=wS2zrhDyQkEgFMlj" class="block" data-tag="games">
         <div class="image-container">
-          <iframe width="500" height="280" src="https://www.youtube.com/embed/Xu7osF5fqSk" frameborder="0" allowfullscreen></iframe>
+          <img src="../../Images/skate.jpg" alt="The Ramp">
         </div>
         <h3>The Ramp</h3>
-        <p>The ramp is a skateboarding simulator where you skate</p>
+        <p><em>Games</em></p>
       </a>
-      <a href="https://github.com/BlitzNoval" class="block">
+      <a href="https://peoplesolutionshub.com.au/" class="block" data-tag="work">
+        <div class="image-container">
+          <img src="../../Images/nami.jpg" alt="People Solutions Hub">
+        </div>
+        <h3>People Solutions Hub</h3>
+        <p><em>Work</em></p>
+      </a>
+      <a href="https://github.com/BlitzNoval" class="block" data-tag="work">
         <div class="image-container">
           <img src="../../Images/git.jpg" alt="GitHub">
         </div>
         <h3>My GitHub</h3>
-        <p>My GitHub profile with my projects.</p>
+        <p><em>Work</em></p>
       </a>
-      <a href="https://github.com/BlitzNoval/PookieWookie" class="block">
+      <a href="https://github.com/BlitzNoval/PookieWookie" class="block" data-tag="games">
         <div class="image-container">
           <img src="../../Images/valo.jpg" alt="Valorant Aim Trainer">
         </div>
         <h3>Valorant Aim Trainer</h3>
-        <p>An aim labs trainer prototype.</p>
+        <p><em>Games</em></p>
       </a>
-      <a href="#" class="block">
+      <a href="#" class="block" data-tag="misc">
         <div class="image-container">
-          <img src="../../Images/youtube.jpg" alt="Block 6">
+          <img src="../../Images/moviess.jpg" alt="Online Movie List">
         </div>
         <h3>Online Movie List</h3>
-        <p>A comprehensive movie list on the internet and app based as well.</p>
+        <p><em>Misc.</em></p>
       </a>
+     
     </div>
   </main>
-  
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const blocks = document.querySelectorAll(".block");
+      let currentFilter = null;
 
-  <footer>
-    <p style="text-align: center; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
-  </footer>
-  
+      filterButtons.forEach(button => {
+        button.addEventListener("click", () => {
+          const filter = button.getAttribute("data-filter");
+
+          if (currentFilter === filter) {
+            // If the same filter is clicked again, reset to show all
+            currentFilter = null;
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+          } else {
+            // Set the new filter and update active state
+            currentFilter = filter;
+            filterButtons.forEach(btn => btn.classList.remove("active"));
+            button.classList.add("active");
+          }
+
+          blocks.forEach(block => {
+            block.classList.add('hide');
+            if (!currentFilter || currentFilter === "all" || block.getAttribute("data-tag") === currentFilter) {
+              setTimeout(() => {
+                block.style.display = "block";
+                block.classList.remove('hide');
+              }, 300);
+            } else {
+              setTimeout(() => {
+                block.style.display = "none";
+              }, 300);
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 </html>

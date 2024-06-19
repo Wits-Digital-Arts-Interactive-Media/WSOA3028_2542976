@@ -1,51 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: left;
+  margin: 20px;
+}
+
+.filters {
+  margin: 20px;
+}
+
+.filter-btn {
+  margin-right: 10px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.filter-btn:hover {
+  background-color: #ccc;
+}
+
+.filter-btn.active {
+  background-color: #ccc;
+  font-weight: bold;
+}
+
 .block-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px; /* Increased gap for more white space */
+  grid-gap: 20px;
   padding: 20px;
-  }
-  
-  .block {
-  background-color: #fff;
-  border: 2px solid #333;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  transition: box-shadow 0.3s ease;
-  text-decoration: none; /* Ensures no underline on hover /
-  color: inherit; / Inherit color /
-  overflow: hidden; / Ensures no overflow of images */
-  }
-  
-  .block
-  {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-  .image-container {
-  overflow: hidden;
-  border-radius: 8px;
-  }
-  
-  .block img {
+}
+
+.block {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.block.hide {
+  transform: translateY(-20px);
+  opacity: 0;
+}
+
+.image-container {
   width: 100%;
-  height: auto;
+  padding-top: 100%;
+  position: relative;
+  overflow: hidden;
   transition: transform 0.3s ease;
-  }
-  
-  .block
-  img {
-  transform: scale(1.1); /* Ensures image scales within the card */
-  }
-  
-  .block h3 {
-  font-size: 18px;
-  margin-bottom: 5px;
-  }
-  
-  .block p {
-  font-size: 14px;
-  color: #666;
-  margin-bottom: 10px;
-  }
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.3s ease;
+}
+
+.block:hover .image-container img {
+  filter: brightness(1.2);
+}
+
+.block h3 {
+  font-weight: bold;
+  margin: 10px 0 0 0;
+  text-align: left;
+}
+
+.block p {
+  font-style: italic;
+  margin: 5px 0 0 0;
+  text-align: left;
+}
+
+
+.filter-btn.active {
+  background-color: #0011ff58;
+  font-weight: bold;
+}
