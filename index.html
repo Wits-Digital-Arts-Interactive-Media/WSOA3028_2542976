@@ -15,27 +15,86 @@
     import { initialise } from "./Scripts/script.js";
     initialise("Index");
   </script>
+  <style>
+
+    body {
+      background-image: url('./Images/pex2.jpg'); 
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; 
+      background-repeat: no-repeat;
+    }
+
+    img {
+      position: fixed;
+      top: 10%;
+      right: 0;
+      bottom: 0;
+      left: 54%;
+      transform: translateX(50%);
+      z-index: -1; /* Behind the text */
+      width: 30%; /* Adjust size as needed */
+      height: auto;
+      transition: opacity 0.1s linear; /* Smooth transition for fading */
+
+    }
+  </style>
 </head>
 <body>
+  <img id="backgroundImage" src="./Images/p.jpg" alt="Background Image">
   <header>
     <nav>
-      <o></o>
+      <ul> </ul>
+      
     </nav>
   </header>
   <div class="container">
     <h1 class="typing-animation" id="typing-text">
       <span id="line1" class="line"> Game Developer </span>
       <br>
-      <span id="line2" class="line">Digital Artist</span>
+      <span id="line2" class="line"> Digital Artist</span>
       <br>
       <span id="line3" class="line">Digital Artist</span>
     </h1>
-    <p>Welcome to my Portfolio. I'm a passionate web designer. Explore my work and get to know me better.</p>
+   
+    <p>| Creator | Developer | Digital Artist |</p> <p2 class="p2"> | South Africa | Johannesburg |</p>
+   
+ 
     <canvas id="particle-canvas"></canvas>
   </div>
   <footer>
-    <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
+  
   </footer>
   <script src="./Scripts/typingAnimation.js"></script>
+  <script>
+    const images = [
+      './Images/c.jpg',
+      './Images/p.jpg',
+      './Images/d.jpg',
+      './Images/l.jpg',
+      './Images/g.jpg',
+      './Images/k.jpg',
+      './Images/m.jpg',
+      './Images/e.jpg',
+      './Images/d.jpg',
+      
+
+      // Add more image paths as needed
+    ];
+
+    const imgElement = document.getElementById('backgroundImage');
+    let currentImageIndex = 0;
+
+    function changeImage() {
+      imgElement.style.opacity = 0; // Fade out
+      setTimeout(() => {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        imgElement.src = images[currentImageIndex];
+        imgElement.style.opacity = 1; // Fade in
+      }, 100); // Wait for fade out transition (0.5s)
+    }
+
+    setInterval(changeImage, 500); // Change image every 3 seconds
+  </script>
 </body>
 </html>

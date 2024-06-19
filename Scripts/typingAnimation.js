@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
     const lines = [
-      { element: document.getElementById('line1'), text: ' Developer ' },
-      { element: document.getElementById('line2'), text: ' Creative' },
-      { element: document.getElementById('line3'), text: ' Artist ' }
+      { element: document.getElementById('line1'), text: 'Dream.' },
+      { element: document.getElementById('line2'), text: 'Create.' },
+      { element: document.getElementById('line3'), text: 'Innovate.' }
     ];
   
     function typeLine(line, callback) {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (i < text.length) {
           element.textContent += text.charAt(i);
           i++;
-          setTimeout(typeCharacter, 100); // Adjust typing speed here
+          setTimeout(typeCharacter, 100); // Adjust typing speed here (lower is faster)
         } else {
           element.style.borderRight = 'none'; // Remove caret after typing
           if (callback) callback();
