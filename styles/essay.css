@@ -4,7 +4,12 @@ main {
   align-items: center;
   padding: 20px;
 }
-
+footer {
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 155px;
+  flex-shrink: 0;
+}
 .site-card {
   background-color: #fff;
   border-radius: 8px;

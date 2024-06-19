@@ -1,6 +1,6 @@
 const root = "/WSOA3028_2542976";
 const pages = [
-  { name: "Home", href: `${root}/index.html` },
+  { name: "Index", href: `${root}/index.html` },
   { name: "Portfolio", href: `${root}/Pages/Portfolio/portfolio.html` },
   { name: "About Me", href: `${root}/Pages/About Me/about.html` },
   { name: "Essays", href: `${root}/Pages/Essays/essay.html` },
