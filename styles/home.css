@@ -16,7 +16,9 @@ h2 {
     transform: translateX(80%); /* Adjust for center alignment */
 }
 
-
+body {
+  overflow: hidden;
+}
 
 footer {
     margin-top: 500px; /* Increased spacing */
