@@ -18,7 +18,7 @@ p {
   color: #000000;
   position: relative; /* Add position relative for absolute positioning */
   left: 40%; /* Adjust the horizontal position */
-  top: 300px; /* Adjust the vertical position */
+  top: 250px; /* Adjust the vertical position */
 }
 
 .container {
@@ -30,6 +30,51 @@ p {
   box-sizing: border-box;
   position: relative; /* Ensure container is relative for absolute positioning within */
 }
+
+.movable-image {
+  position: absolute;
+  top: 150px; /* Initial Y position */
+  left: 1150px; /* Initial X position */
+  z-index: -2; /* Position on z-axis */
+  pointer-events: none; /* Prevents the image from affecting mouse events */
+  
+  /* Size properties */
+  width: 200px; /* Initial width */
+  height: auto; /* Auto height to maintain aspect ratio */ 
+  border-radius: 1px; /* Rounded corners */
+}
+
+.movable-image2 {
+  position: absolute;
+  top: 150px; /* Initial Y position */
+  left: 1425px; /* Initial X position */
+  z-index: -2; /* Position on z-axis */
+  pointer-events: none; /* Prevents the image from affecting mouse events */
+  
+  /* Size properties */
+  width: 200px; /* Initial width */
+  height: auto; /* Auto height to maintain aspect ratio */ 
+  border-radius: 1px; /* Rounded corners */
+}
+
+.movable-image3 {
+  position: absolute;
+  top: 150px; /* Initial Y position */
+  left: 1700px; /* Initial X position */
+  z-index: -2; /* Position on z-axis */
+  pointer-events: none; /* Prevents the image from affecting mouse events */
+  /* Size properties */
+  width: 200px; /* Initial width */
+  height: auto; /* Auto height to maintain aspect ratio */ 
+  border-radius: 1px; /* Rounded corners */
+}
+
+
+
+
+
+
+
 
 .r-1 {
   position: absolute;
@@ -94,7 +139,7 @@ p {
   color: #000000;
   position: relative; /* Add position relative for absolute positioning */
   left: 50%; /* Adjust the horizontal position */
-  top: 655px; /* Adjust the vertical position */
+  top: 620px; /* Adjust the vertical position */
 }
 
 
@@ -103,7 +148,7 @@ p {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: -2; /* Ensure background image is behind everything */
+  z-index: -3; /* Ensure background image is behind everything */
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -127,7 +172,7 @@ p {
 
 .social-icons {
   position: absolute;
-  top: 650px; /* Initial Y position */
+  top: 620px; /* Initial Y position */
   left: 1140px; /* Initial X position */
   display: flex;
   justify-content: center;
@@ -154,3 +199,6 @@ footer {
   margin-top: 20px;
   font-size: 14px;
 }
+
+
+/*
