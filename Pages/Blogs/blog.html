@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Post Week 3</title>
-    <link rel="stylesheet" href="../../styles/styles.css">
+
     <link rel="stylesheet" href="../../styles/blogpages.css">
     <link rel="stylesheet" href="../../styles/blogmain.css">
     <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Blogposts");</script>
@@ -15,7 +15,25 @@
          
         </nav>
       </header>
-      <h1> Blog Posts </h1>
+       <div class="scroller" data-direction="left" data-speed="slow">
+      <div class="scroller__inner"></div>
+      <div class="scroller" data-speed="slow">
+        <ul class="tag-list scroller__inner">
+          <h1><li><u> Blogs </u>  </li></h1>     
+          <h1><li><u> Blogs </u>  </li></h1>       
+          <h1><li><u> Blogs </u>  </li></h1>       
+          <h1><li><u> Blogs </u>  </li></h1>     
+          <h1><li><u> Blogs </u>  </li></h1>       
+          <h1><li><u> Blogs </u>  </li></h1>          
+          <h1><li><u> Blogs </u>  </li></h1>     
+          <h1><li><u> Blogs </u>  </li></h1>       
+          <h1><li><u> Blogs </u>  </li></h1>       
+          <h1><li><u> Blogs </u>  </li></h1>     
+          <h1><li><u> Blogs </u>  </li></h1>       
+          <h1><li><u> Blogs </u>  </li></h1>           
+        </ul>
+      </div>
+    </div>
     <main>
         <ul class="timeline">
             <li class="timeline-item">
@@ -502,7 +520,35 @@ function toggleReadMore(contentId) {
         initialise("Blogposts");
     </script>
 
+<script>
+    const scrollers = document.querySelectorAll(".scroller");
 
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}
+
+  </script>
 
 
 </body>

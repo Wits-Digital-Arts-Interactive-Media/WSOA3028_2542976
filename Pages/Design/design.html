@@ -11,58 +11,12 @@
 
     <title>Design</title>
     <link rel="stylesheet" href="../../styles/design.css">
-    <link rel="stylesheet" href="../../styles/styles.css">
+    
     <script defer src="../../Scripts/activePage.js"></script>
     <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Design");</script>
     
 </head>
 
-<script>
-    // Function to animate cards on scroll
-    function animateOnScroll() {
-      const cards = document.querySelectorAll('.card');
-      const windowHeight = window.innerHeight;
-  
-      cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-  
-        if (cardTop < windowHeight * 0.8) {
-          card.classList.add('animate');
-        } else {
-          card.classList.remove('animate');
-        }
-      });
-    }
-  
-    // Function to animate text on hover
-    function animateTextOnHover() {
-      const cards = document.querySelectorAll('.card');
-  
-      cards.forEach(card => {
-        const text = card.querySelector('p');
-  
-        card.addEventListener('mouseover', () => {
-          text.classList.add('animate-text');
-        });
-  
-        card.addEventListener('mouseout', () => {
-          text.classList.remove('animate-text');
-        });
-      });
-    }
-  
-    // Text animation
-    const animateText = document.querySelectorAll('.animate-text');
-  
-    animateText.forEach(text => {
-      text.style.animation = 'textAnimation 1s infinite';
-    });
-  
-    // Call the functions on page load and scroll
-    window.addEventListener('load', animateOnScroll);
-    window.addEventListener('scroll', animateOnScroll);
-    window.addEventListener('load', animateTextOnHover);
-  </script>
 
 <body>
     <header>
@@ -71,7 +25,26 @@
         
         </nav>
     </header>
-<h1> Design </h1>
+    <div class="scroller" data-direction="left" data-speed="slow">
+      <div class="scroller__inner"></div>
+      <div class="scroller" data-speed="slow">
+        <ul class="tag-list scroller__inner">
+          <h1><li><u> Design </u>  </li></h1>     
+          <h1><li><u> Notes </u>  </li></h1>       
+          <h1><li><u> Design </u>  </li></h1>     
+          <h1><li><u> Notes </u>  </li></h1>      
+          <h1><li><u> Design </u>  </li></h1>     
+          <h1><li><u> Notes </u>  </li></h1>           
+          <h1><li><u> Design </u>  </li></h1>     
+          <h1><li><u> Notes </u>  </li></h1>       
+          <h1><li><u> Design </u>  </li></h1>     
+          <h1><li><u> Notes </u>  </li></h1>     
+          <h1><li><u> Design </u>  </li></h1>     
+          <h1><li><u> Notes </u>  </li></h1>           
+        </ul>
+      </div>
+    </div>
+    <main>
     <main>
         <section class="card">
             <h2>Font & Color Choices</h2>
@@ -215,26 +188,37 @@
         
     </main>
 
-    <footer>
-        
-        <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
-      </footer>
+
+      </script>
+
       <script>
-    // Scroll to Top Button Script
-    const scrollTopBtn = document.getElementById('scroll-top-btn');
-
-    window.onscroll = function() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollTopBtn.style.display = "block";
-      } else {
-        scrollTopBtn.style.display = "none";
+          const scrollers = document.querySelectorAll(".scroller");
+      
+      // If a user hasn't opted in for recuded motion, then we add the animation
+      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        addAnimation();
       }
-    };
-
-    function scrollToTop() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
-  </script>
+      
+      function addAnimation() {
+        scrollers.forEach((scroller) => {
+          // add data-animated="true" to every `.scroller` on the page
+          scroller.setAttribute("data-animated", true);
+      
+          // Make an array from the elements within `.scroller-inner`
+          const scrollerInner = scroller.querySelector(".scroller__inner");
+          const scrollerContent = Array.from(scrollerInner.children);
+      
+          // For each item in the array, clone it
+          // add aria-hidden to it
+          // add it into the `.scroller-inner`
+          scrollerContent.forEach((item) => {
+            const duplicatedItem = item.cloneNode(true);
+            duplicatedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(duplicatedItem);
+          });
+        });
+      }
+      
+        </script>
 </body>
 </html>

@@ -1,74 +1,306 @@
+body {
+  background-color: #ffffff;
+  margin: 0; 
+  padding: 0; 
+  overflow-x: hidden; 
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
+}
+
+/* TEXT FORMATTING */
+h1, h2, a {
+  color: #000000;
+}
+
 h1 {
-    font-size: 6em; /* Set font size */
-    text-align: left; /* Center align text horizontally */
-    position: absolute; /* Position the element */
-    bottom: 20%; /* Adjust the vertical position */
-    left: 10%; /* Center horizontally */
-    transform: translateX(-50%); /* Adjust for center alignment */
+  text-align: center;
+  font-size: 8em;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+hr {
+  width: 100%; 
+  margin: 20px 0; 
+  border: none;
+  height: 1px;
+  background-color: #000000;
+}
+
+/* QUOTE GENERATOR CSS */
+.container {
+  text-align: center;
+  margin-top: 0px;
+  flex: 1;
+}
+
+.quote {
+  margin-top: 30px;
+  font-size: 1.25em;
+  font-style: italic;
+  color: #333333;
+}
+
+/* BUTTONS */
+#generate-btn {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #b01d12;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1em;
+}
+
+#generate-btn:hover {
+  background-color: #cc0000;
+  transform: scale(1.05);
+}
+
+/* LINKS */
+a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #0000005a;
+}
+
+/* DYNAMIC MENU */
+
+#menuBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 999;
+}
+/* NAVIGATION MENU */
+/* Main navigation bar styles */
+/* Main navigation bar styles */
+/* Main navigation bar styles */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 12px 32px; /* Slightly increased padding for a more spacious feel */
+  box-sizing: border-box;
+  background-color: #000000; /* Softer background color for a more modern look */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 200px;  /* Moderately rounded edges */
+  transition: box-shadow 0.3s;
+  
+}
+
+nav:hover {
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+/* List styles */
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 24px; /* Increased spacing between menu items for better separation */
+}
+
+/* List item styles */
+nav ul li {
+  position: relative;
+  padding-bottom: 1px; /* Space for the dot */
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  bottom: 42%;
+  transform: translateX(-50%);
+  width: 8px; /* Size of the dot */
+  height: 8px;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover::after,
+nav ul li a.current-page::after {
+  background-color: #000000; /* Color of the dot */
+  transform: translateX(-50%) scale(1.2); /* Slightly enlarge the dot */
 }
 
 
-h2 {
-    font-size: 6em; /* Set font size */
-    position: absolute; /* Position the element */
-    bottom: 8%; /* Adjust the vertical position */
-    left: 0; /* Position on the left */
-    transform: translateX(80%); /* Adjust for center alignment */
+/* Link styles */
+nav ul li a {
+  display: block;
+  padding: 12px 24px; /* Increased padding for a cleaner look */
+  color: #ffffff; /* Darker text color for better readability */
+  text-decoration: none;
+  transition: color 0.3s, background-color 0.3s, transform 0.3s;
+  border-radius: 10px;  /* Rounded edges for a softer look */
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern and clean font */
+  font-size: 16px; /* Consistent font size */
+}
+
+/* Link hover styles */
+nav ul li a:hover {
+  color: #000000;
+  background-color: #ffffff; /* Primary color for hover effect */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+/* Selected link styles */
+nav ul li a.current-page {
+  color: #000000;
+  background-color: #ffffff; /* Darker primary color for selected item */
+  transform: translateY(-2px); /* Consistent lift for selected item */
+}
+
+/* Full highlight for selected and hovered items */
+nav ul li ul li a:hover, nav ul li ul li a.selected {
+  background-color: #0056b3;
+  color: #ffffff;
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+
+
+/* Full highlight for selected and hovered items */
+nav ul li ul li a:hover, nav ul li ul li a.selected {
+  background-color: #ff0000;
+  color: #ffffff;
+}
+
+
+
+
+
+p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  text-align: left; /* Ensure text alignment is left */
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* Increase the maximum width for better readability */
+  margin: 0px auto; /* Center align the paragraph with top/bottom margin */
+  color: #ffffff;
+  position: relative; /* Add position relative for absolute positioning */
+  left: 7%; /* Adjust the horizontal position */
+  top: 0px; /* Adjust the vertical position */
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2em;
+  text-align: left; /* Ensure text alignment is left */
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* Increase the maximum width for better readability */
+  margin: 0px auto; /* Center align the paragraph with top/bottom margin */
+  color: #ffffff;
+  position: relative; /* Add position relative for absolute positioning */
+  left: 20%; /* Adjust the horizontal position */
+  top: -20px; /* Adjust the vertical position */
+}
+
+.p3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  text-align: left; /* Ensure text alignment is left */
+  width: 80%; /* Adjust the width as needed */
+  max-width: 800px; /* Increase the maximum width for better readability */
+  margin: 0px auto; /* Center align the paragraph with top/bottom margin */
+  color: #ffffff;
+  position: relative; /* Add position relative for absolute positioning */
+  left: 20%; /* Adjust the horizontal position */
+  top: -20px; /* Adjust the vertical position */
 }
 
 body {
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.welcome-section {
+  text-align: center;
+  padding: 0px;
+}
+
+
+.typing-animation {
+  display: inline-block;
+  text-align: left;
+  max-width: 100%;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 130px;
+  line-height: 1.5;
+  color: #ffffff;
+}
+
+.typing-animation .line {
+  display: inline-block;
+  white-space: nowrap;
   overflow: hidden;
+  border-right: 1px solid #44444400;
+  opacity: 0; /* Initially hidden */
+  animation: blink-caret 0.5s step-end infinite;
 }
 
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #00000000;
+  }
+}
+
+
+
+
+
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -20;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* Footer at the bottom */
 footer {
-    margin-top: 500px; /* Increased spacing */
-    padding: 20px;
-   
-    text-align: center;
-    opacity: 0.7;
-}
-
-.container {
-    flex: 1;
-    padding: 20px;
-  }
-
-  .image-container {
-    position: fixed;
-    left: 1%;
-    top: 9%;
-    width: 60%; /* Adjust the width as needed */
-    height: 90vh; /* Full height of the viewport */
-    overflow: hidden;
-  }
-
-  .image-container img {
-    width: 70%; /* Ensure the image fills its container */
-    height: 100%; /* Ensure the image fills its container */
-    object-fit: cover; /* Cover entire area without stretching */
-  }
-
-  .content {
-    flex: 1;
-    padding: 20px;
-  }
-
-
-h1 {
-  font-size: 6em; /* Set font size */
-  text-align: left; /* Center align text horizontally */
-  position: absolute; /* Position the element */
-  bottom: 0%; /* Adjust the vertical position */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-20%); /* Adjust for center alignment */
-  color: #be8200;
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 0px;
+  flex-shrink: 0;
 }
 
 
-h2 {
-  font-size: 4em; /* Set font size */
-  position: absolute; /* Position the element */
-  bottom: 15%; /* Adjust the vertical position */
-  left: 0; /* Position on the left */
-  transform: translateX(155%); /* Adjust for center alignment */
-}

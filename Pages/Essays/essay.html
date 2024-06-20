@@ -9,7 +9,7 @@
     <meta property="og:description" content="Gateway to The Internet">
     <meta property="og:type" content="Base Website">
     <title>Essays</title>
-    <link rel="stylesheet" href="../../styles/styles.css">
+    
     <link rel="stylesheet" href="../../styles/essay.css">
     <script type="module">
         import {initialise} from "/WSOA3028_2542976/Scripts/script.js";
@@ -49,6 +49,28 @@
                     <i class="fas fa-book-open"></i> Read PDF
                 </button>
                 <button onclick="embedPdf('WSOA3028_2542976_Liam Moodley_Essay 1.pdf')">
+                    <i class="fas fa-eye"></i> View In Site 
+                </button>
+            </div>
+        </div>
+        <!-- Add more site-card links for additional essays -->
+        <div id="pdf-container" class="pdf-container">
+            <button onclick="closePdf()" class="close-button">Close</button>
+            <div id="pdf-embed" class="pdf-embed"></div>
+        </div>
+        <div class="site-card">
+            <a href="WSOA3028_2542976_Liam Moodley_Essay 2.pdf" target="_blank">
+                <h2>Essay 2</h2>
+                <p>Digital Colonialism</p>
+            </a>
+            <div class="card-buttons">
+                <button onclick="window.location.href='WSOA3028_2542976_Liam Moodley_Essay 2.pdf'" download>
+                    <i class="fas fa-download"></i> Download
+                </button>
+                <button onclick="window.open('WSOA3028_2542976_Liam Moodley_Essay 2.pdf', '_blank')">
+                    <i class="fas fa-book-open"></i> Read PDF
+                </button>
+                <button onclick="embedPdf('WSOA3028_2542976_Liam Moodley_Essay 2.pdf')">
                     <i class="fas fa-eye"></i> View In Site 
                 </button>
             </div>
