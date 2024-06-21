@@ -3,6 +3,7 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   text-align: center;
+  
 }
 
 main {
@@ -20,7 +21,7 @@ footer {
 }
 
 .site-card {
-  background-color: #fff;
+  background-color: #bfbfbf25;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 30px;
@@ -67,7 +68,7 @@ footer {
 }
 
 .card-buttons button {
-  background-color: #0d00ff;
+  background-color: #003399;
   color: #fff;
   border: none;
   padding: 10px 16px;
@@ -77,6 +78,7 @@ footer {
   transition: background-color 0.3s;
   display: flex;
   align-items: center;
+  font-size: 16px;
 }
 
 .card-buttons button i {
@@ -84,7 +86,7 @@ footer {
 }
 
 .card-buttons button:hover {
-  background-color: #18278d;
+  background-color: #a30000;
 }
 
 .pdf-container {
@@ -106,18 +108,18 @@ footer {
 }
 
 .close-button {
-  background-color: #000dff;
+  background-color: #003399;
   color: #fff;
   border: none;
   padding: 10px 16px;
   border-radius: 5px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .close-button:hover {
-  background-color: #cc0000;
+  background-color: #a30000;
 }
 
 /* Responsive styles */

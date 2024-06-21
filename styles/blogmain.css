@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+   
     background-color: #f7f7f7;
 }
 
@@ -96,8 +96,9 @@ body {
 
 .timeline-content a {
     text-decoration: none;
-    color: #ff0000ae;
+    color: #000000;
     font-weight: bold;
+    font-size: 16px;
 }
 
 .timeline-content a:hover {
@@ -112,10 +113,10 @@ body {
 .line {
     position: absolute;
     top: 0;
-    left: 50px;
+    left: 10px;
     width: 2px;
     height: 0;
-    background-color: #ccc;
+    background-color: #000000;
     z-index: -1;
 }
 
@@ -150,3 +151,82 @@ body {
         height: 100%;
     }
 }
+
+.fixed-buttons {
+    position: fixed;
+    left: 10px; /* Adjust as needed */
+    bottom: 400px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 1000;
+  }
+  
+  .weeks-toggle {
+    padding: 20px 35px;
+    background-color: #a30000;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    margin-bottom: 10px; /* Adjust spacing */
+    font-size: 16px;
+  }
+  
+  .weeks-toggle:hover {
+    background-color: #003399;
+  }
+  
+  .weeks-menu {
+    position: absolute;
+    left: calc(100% + 10px); /* Adjust position relative to .fixed-buttons */
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    transition: left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .weeks-menu.active {
+    left: calc(0% - 400px); /* Adjust menu width */
+  }
+  
+  .weeks-menu button {
+    margin: 5px 0;
+    padding: 10px 50px;
+    background-color: #000000;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  .weeks-menu button:hover {
+    background-color: #003399;
+  }
+  
+  .back-to-top {
+    margin-top: 10px; /* Adjust spacing */
+    padding: 20px 35px;
+    background-color: #a30000;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    font-size: 16px;
+    
+  }
+  
+  .back-to-top:hover {
+    background-color: #003399;
+  }
+  

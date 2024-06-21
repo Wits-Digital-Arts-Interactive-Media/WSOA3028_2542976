@@ -37,7 +37,7 @@
     <main>
         <ul class="timeline">
             <li class="timeline-item">
-                <div class="timeline-date">Week 1</div>
+                <div id="blog1" class="timeline-date">Week 1</div>
                 <div class="timeline-content">
                     <h3>The Github Initiative</h3>
                     <p>GitHub over the past 2 years has been an enriching experience – a frustrating yet very enriching all the while teaching me about open-source platforms...</p>
@@ -67,7 +67,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 2</div>
+                <div id="blog2" class="timeline-date">Week 2</div>
                 <div class="timeline-content">
                     <h3>Inspiration Time</h3>
                     <p>It is showing off the works of my life 
@@ -121,7 +121,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 3</div>
+                <div id="blog3" class="timeline-date">Week 3</div>
                 <div class="timeline-content">
                     <h3>The User Experience</h3>
                     <p>When someone enters my website i want them to be in awe , not of me as a person but of just how simplistic yet exhilarating it is to scroll on my website...</p>
@@ -163,7 +163,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 4</div>
+                <div id="blog4" class="timeline-date">Week 4</div>
                 <div class="timeline-content">
                     <h3>Charts Anyone?</h3>
                     <p>I found working on this website I had a lot of trouble when it came to the css of some of the elements , as I found myself looking at lot of tutorials on W3Schools...</p>
@@ -185,7 +185,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 5</div>
+                <div id="blog5" class="timeline-date">Week 5</div>
                 <div class="timeline-content">
                     <h3>FNB vs FlySafair</h3>
                     <p>Look there’s a lot of bad to say about the FNB website but we'll save that for the other column, let’s talk about the good. One you immediately know its...</p>
@@ -223,7 +223,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 6</div>
+                <div id="blog6" class="timeline-date">Week 6</div>
                 <div class="timeline-content">
                     <h3>Ethical Dilemmas in Software Engineering</h3>
                     <p>You see, throughout the years we have grown to understand the boundaries we need to set on the internet, but we look back and realize the evolu...</p>
@@ -265,7 +265,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 7</div>
+                <div id="blog7" class="timeline-date">Week 7</div>
                 <div class="timeline-content">
                     <h3>Digital Inclusion: A Critical Response</h3>
                     <p>Access remains unequal globally due to high costs, lack of infrastructure, and inadequate digital literacy. The article "Digital Inclusion" on the Institute...</p><a href="javascript:void(0)" onclick="toggleReadMore('read-more-7')">Read More</a>
@@ -308,7 +308,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 8</div>
+                <div id="blog8" class="timeline-date">Week 8</div>
                 <div class="timeline-content">
                     <h3>Information Geographies and Digital Hegemonies</h3>
                     <p>This week's readings provided a deep dive into the spatial dynamics of digital information and the hegemonic structures governing its acc..</p>
@@ -337,7 +337,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 9</div>
+                <div id="blog9" class="timeline-date">Week 9</div>
                 <div class="timeline-content">
                     <h3>Digital Inequalities in the Age of Artificial Intelligence</h3>
                     <p>This week, we focus on Christoph Lutz's 2019 work, "Digital Inequalities in the Age of Artificial Intelligence," which explores how the rise of AI technologies can both mitiga...</p>
@@ -370,7 +370,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 10</div>
+                <div id="blog10" class="timeline-date">Week 10</div>
                 <div class="timeline-content">
                     <h3>Benefits and Challenges of Responsive Design</h3>
                     <p>Responsive design ensures that websites function well on a variety of devices and screen sizes, offering numerous benefits but also presentin...</p>
@@ -417,7 +417,7 @@
                 <div class="line"></div>
             </li>
             <li class="timeline-item">
-                <div class="timeline-date">Week 11</div>
+                <div id="blog11" class="timeline-date">Week 11</div>
                 <div class="timeline-content">
                     <h3>The concept of the internet as an ethical space.</h3>
                     <p>The concept of the internet as an ethical space is multifaceted, encompassing the principles of fairness, inclusivity, transparency, an</p>
@@ -459,6 +459,17 @@
             
         </ul>
     </main>
+
+    <div class="fixed-buttons">
+        <button class="weeks-toggle" onclick="toggleWeeksMenu()">Weeks</button>
+        <div id="weeks-menu" class="weeks-menu">
+          <button onclick="scrollToSection('blog1')">Weeks 1 - 4</button>
+          <button onclick="scrollToSection('blog5')">Weeks 5 - 8 </button>
+          <button onclick="scrollToSection('blog9')">Weeks 9 - 11</button>
+        </div>
+        <button class="back-to-top" onclick="scrollToTop()">Return to Top</button>
+        <button class="back-to-top" onclick="scrollToBottom()">Scroll Down to Bottom</button>
+      </div>
 
     <footer>
         
@@ -549,6 +560,35 @@ function addAnimation() {
 }
 
   </script>
+
+
+  
+<script>
+    function scrollToSection(id) {
+      const element = document.getElementById(id);
+      const offset = 100; // Adjust this value to change how far above the element it scrolls
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+    
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+      
+    function scrollToTop() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+
+    function scrollToBottom() {
+  window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+}
+    
+    function toggleWeeksMenu() {
+      const weeksMenu = document.getElementById('weeks-menu');
+      weeksMenu.classList.toggle('active');
+    }
+    </script>
 
 
 </body>

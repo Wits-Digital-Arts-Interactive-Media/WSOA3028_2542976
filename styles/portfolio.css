@@ -73,13 +73,14 @@ body {
   background-color: #000000;
   color: white; /* Set button text color to white */
   cursor: pointer;
-  border-radius: 2px;
+  border-radius: 10px;
   transition: background-color 0.3s;
   font-size: 15px;
+  
 }
 
 .filter-btn:hover {
-  background-color: #9d1c1c;
+  background-color: #1c279d;
   color: rgb(255, 255, 255); /* Change text color on hover */
 }
 

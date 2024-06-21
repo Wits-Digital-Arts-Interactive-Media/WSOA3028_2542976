@@ -138,8 +138,8 @@ p {
   margin: 0px auto; /* Center align the paragraph with top/bottom margin */
   color: #000000;
   position: relative; /* Add position relative for absolute positioning */
-  left: 50%; /* Adjust the horizontal position */
-  top: 620px; /* Adjust the vertical position */
+  left: 60%; /* Adjust the horizontal position */
+  top: 560px; /* Adjust the vertical position */
 }
 
 
@@ -172,8 +172,8 @@ p {
 
 .social-icons {
   position: absolute;
-  top: 620px; /* Initial Y position */
-  left: 1140px; /* Initial X position */
+  top: 550px; /* Initial Y position */
+  left: 1030px; /* Initial X position */
   display: flex;
   justify-content: center;
   margin-top: 20px;
