@@ -286,3 +286,28 @@ h1 {
   margin-bottom: 20px;
   color: #ffffff;
 }
+
+.fixed-buttons {
+  position: fixed;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.fixed-buttons button {
+  margin: 15px 0;
+  padding: 10px 15px;
+  background-color: #690303;
+  color: #F5F5F5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fixed-buttons button:hover {
+  background-color: #003399;
+}
