@@ -23,15 +23,15 @@
   </header>
   
   <img src="../../Images/n.jpg" alt="Image Description" class="background-image">
-  <img src="../../Images/Me/1.png" class="movable-image" alt="Image 1">
+
   <img src="../../Images/Me/1.png" class="movable-image2" alt="Image 1">
-  <img src="../../Images/Me/1.png" class="movable-image3" alt="Image 1">
+
   <div class="container">
     <h4 class="r-1">A</h4>
     <h2 class="r-2">out</h2>
     <h5 class="r-3">b</h5>
     <h3 class="r-4">Me</h3>
-    <h3 class="r-5"><i> ~ Liam J Moodley </i></h3>
+  
     <div class="content">
       <div class="left-section">
         <p>By day, I'm a student, but by night, I dive into a world where creativity thrives. I craft stories that could rival those found in novels, drawing inspiration from diverse perspectives that fuel my passion for game and sound design.</p>
@@ -45,43 +45,14 @@
     </div>
 
     <div class="social-icons">
-      <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-wix"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      <a href="https://www.youtube.com/@ljaymode6044" class="social-icon"><i class="fab fa-youtube"></i></a>
+      <a href="mailto:ljmoodley03@gmail.com" class="social-icon"><i class="fab fa-google"></i></a>
+      <a href="https://www.instagram.com/liamjm__/" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/ljmoodley/" class="social-icon"><i class="fab fa-linkedin"></i></a>
     </div>
   </div>
   
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Get all movable images
-      const images = document.querySelectorAll('.movable-image, .movable-image2, .movable-image3');
-  
-      let currentIndex = 0;
-      const intervalTime = 5000; // 10 seconds
-  
-      // Function to hide all images
-      function hideImages() {
-        images.forEach(image => {
-          image.style.display = 'none';
-        });
-      }
-  
-      // Function to show current image
-      function showCurrentImage() {
-        hideImages();
-        images[currentIndex].style.display = 'block';
-        currentIndex = (currentIndex + 1) % images.length; // Move to the next image index
-      }
-  
-      // Initial setup
-      hideImages();
-      showCurrentImage();
-  
-      // Automatically switch images every intervalTime milliseconds
-      setInterval(showCurrentImage, intervalTime);
-    });
-  </script>
+  <script defer src="../../Scripts/moving.js"></script>
 
 
   <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>

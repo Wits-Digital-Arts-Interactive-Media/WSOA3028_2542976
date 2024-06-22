@@ -302,5 +302,5 @@ document.getElementById('generate-math-joke-btn').addEventListener('click', gene
 document.getElementById('generate-trivia-fact-btn').addEventListener('click', generateTriviaFact);
 document.getElementById('generate-affirmation-btn').addEventListener('click', generateAffirmation);
 
-document.getElementById('generate-fun-fact-btn').addEventListener('click', generateFunFact);
+
 

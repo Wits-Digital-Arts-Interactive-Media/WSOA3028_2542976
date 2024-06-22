@@ -46,7 +46,7 @@ p {
 
 .movable-image2 {
   position: absolute;
-  top: 150px; /* Initial Y position */
+  top: 120px; /* Initial Y position */
   left: 1425px; /* Initial X position */
   z-index: -2; /* Position on z-axis */
   pointer-events: none; /* Prevents the image from affecting mouse events */
@@ -190,7 +190,23 @@ p {
 
 
 .social-icon:hover {
-  color: #000dff;
+  transition: color 0.3s ease;
+}
+
+.social-icon:nth-child(1):hover {
+  color: #ff0000; /* YouTube red */
+}
+
+.social-icon:nth-child(2):hover {
+  color: #FBBC05; /* Google blue */
+}
+
+.social-icon:nth-child(3):hover {
+  color: #E1306C; /* Instagram pink */
+}
+
+.social-icon:nth-child(4):hover {
+  color: #0077B5; /* LinkedIn blue */
 }
 
 footer {
@@ -202,3 +218,5 @@ footer {
 
 
 /*
+
+

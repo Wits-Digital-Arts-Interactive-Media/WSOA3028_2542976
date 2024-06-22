@@ -149,3 +149,43 @@ body {
   margin: 5px 0 0 0;
   text-align: left;
 }
+@media (max-width: 1200px) {
+  .block-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+
+  .filter-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .block-container {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 6px 15px;
+    font-size: 13px;
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scroller__inner {
+    gap: 0.5rem;
+  }
+
+  .filter-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-right: 3px;
+  }
+
+  .block h3, .block p {
+    text-align: center;
+  }
+}

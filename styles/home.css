@@ -348,3 +348,88 @@ button:active {
     opacity: 1; /* Full opacity */
   }
 }
+
+
+@media (max-width: 1200px) {
+  h1 {
+      font-size: 6em;
+  }
+  .typing-animation {
+      font-size: 100px;
+  }
+  img {
+      width: 40%;
+  }
+}
+
+@media (max-width: 992px) {
+  h1 {
+      font-size: 5em;
+  }
+  .typing-animation {
+      font-size: 80px;
+  }
+  img {
+      width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+      font-size: 4em;
+  }
+  .typing-animation {
+      font-size: 60px;
+  }
+  img {
+      width: 60%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  nav ul {
+      flex-direction: column;
+      gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+      font-size: 3em;
+  }
+  .typing-animation {
+      font-size: 40px;
+  }
+  img {
+      width: 70%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  nav {
+      padding: 8px 16px;
+  }
+  nav ul {
+      gap: 8px;
+  }
+  nav ul li a {
+      padding: 8px 16px;
+      font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  h1 {
+      font-size: 2em;
+  }
+  .typing-animation {
+      font-size: 30px;
+  }
+  img {
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+  nav ul li a {
+      padding: 6px 12px;
+      font-size: 12px;
+  }
+}
