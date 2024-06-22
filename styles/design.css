@@ -398,3 +398,23 @@ h1 {
       font-size: 12px;
   }
 }
+
+.youtube-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #9e0202; /* YouTube red */
+  color: #ffffff; /* White text color */
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the YouTube-themed button */
+.youtube-button:hover {
+  background-color: #1f0ea2; /* Darker red on hover */
+}
