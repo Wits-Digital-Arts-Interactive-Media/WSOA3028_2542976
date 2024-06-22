@@ -223,6 +223,15 @@ button#generate-affirmation-btn {
   background-color: #dc35aa; /* Red color */
 }
 
+#google-map {
+  width: 100%; /* Adjusted width to fit the container */
+  height: 400px; /* Adjusted height for better visibility */
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
 #guess-game {
   margin-top: 30px;
   padding: 30px;

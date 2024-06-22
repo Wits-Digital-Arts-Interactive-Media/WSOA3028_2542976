@@ -6,27 +6,56 @@
     <title>Random Quote Generator</title>
     <link rel="stylesheet" href="../../styles/home.css">
     <script defer src="../../Scripts/activePage.js"></script>
-    <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Playground");</script>
-
+    <!-- Importing script.js with the initialize function -->
+    <script type="module">import { initialise } from "/WSOA3028_2542976/Scripts/script.js"; initialise("Playground");</script>
+    
+    <!-- Adding the styles directly inside the head -->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        html, body {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            flex: 1;
+        }
+        #google-map {
+            border: 1px solid #ccc;
+            width: 100%; /* Adjusted width to fit the container */
+            height: 500px;
+            margin: 0 auto;
+        }
+        footer {
+            text-align: center;
+            opacity: 0.5;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
+            <!-- Navigation can be added here if needed -->
         </nav>
     </header>
     <main>
         <div class="container">
             <h1>Random Generator</h1>
-            <div class="quote" id="quote"></div>
+            <!-- Buttons for generating different types of content -->
             <button id="generate-joke-btn">Generate Joke</button>
             <button id="generate-inspirational-btn">Generate Inspirational Quote</button>
             <button id="generate-math-joke-btn">Generate Math Joke</button>
             <button id="generate-trivia-fact-btn">Generate Trivia Fact</button>
             <button id="generate-affirmation-btn">Generate Affirmation</button>
-
+            
+            <!-- Container for displaying generated content -->
             <div class="content-container" id="content-container"></div>
-
-            <!-- New Guess the Number game section -->
+            
+            <!-- Guess the number game section -->
             <div id="guess-game">
                 <h2>Guess the Number Game</h2>
                 <p>I'm thinking of a number between 1 and 1000. Can you guess it?</p>
@@ -37,12 +66,23 @@
                     <div id="temperature-indicator"></div>
                 </div>
             </div>
-        <footer>
-            <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
-        </footer>
+            <h1> Google Maps API </h1>
+            <!-- Container for Google Map -->
+             <p> Places I Want To Vist Filled By Google Maps API </p>
+            <div id="google-map"></div>
+        </div>
     </main>
+    <footer>
+        <p>Brought to you by | LJ Media | © February 2024</p>
+    </footer>
+    
+    <!-- Scripts for different functionalities -->
     <script src="../../Scripts/quote.js"></script>
     <script src="../../Scripts/number.js"></script>
-  
+    <script src="../../Scripts/map.js"></script>
+    <!-- Google Maps API script with your API key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqLV9gqAm7jB3u5H0ZjFgsVYFLDAfadI8&callback=initMap"></script>
+    
+
 </body>
 </html>
