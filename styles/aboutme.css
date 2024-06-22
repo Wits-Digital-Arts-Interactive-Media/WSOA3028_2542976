@@ -13,12 +13,12 @@ p {
   font-size: 1.2em;
   text-align: left; /* Ensure text alignment is left */
   width: 80%; /* Adjust the width as needed */
-  max-width: 800px; /* Increase the maximum width for better readability */
+  max-width: 700px; /* Increase the maximum width for better readability */
   margin: 0px auto; /* Center align the paragraph with top/bottom margin */
   color: #000000;
   position: relative; /* Add position relative for absolute positioning */
-  left: 40%; /* Adjust the horizontal position */
-  top: 200px; /* Adjust the vertical position */
+  left: 30%; /* Adjust the horizontal position */
+  top: 150px; /* Adjust the vertical position */
 }
 
 .container {
@@ -46,8 +46,8 @@ p {
 
 .movable-image2 {
   position: absolute;
-  top: 120px; /* Initial Y position */
-  left: 1425px; /* Initial X position */
+  top: 70px; /* Initial Y position */
+  left: 1005px; /* Initial X position */
   z-index: -2; /* Position on z-axis */
   pointer-events: none; /* Prevents the image from affecting mouse events */
   
@@ -109,7 +109,7 @@ p {
   font-size: 20em;
   margin: 0;
   top: 74.8%;
-  left: 36.6%;
+  left: 33.6%;
   transform: translate(-50%, -50%) rotate(-1deg);
   color: rgba(0, 0, 0, 0.2);
   white-space: nowrap;
@@ -173,7 +173,7 @@ p {
 .social-icons {
   position: absolute;
   top: 550px; /* Initial Y position */
-  left: 1030px; /* Initial X position */
+  left: 20px; /* Initial X position */
   display: flex;
   justify-content: center;
   margin-top: 20px;
