@@ -35,49 +35,13 @@ hr {
 }
 
 /* QUOTE GENERATOR CSS */
-.container {
-  text-align: center;
-  margin-top: 0px;
-  flex: 1;
-}
 
-.quote {
-  margin-top: 30px;
-  font-size: 1.25em;
-  font-style: italic;
-  color: #333333;
-}
 
 /* BUTTONS */
-#generate-btn {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #b01d12;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  font-size: 1em;
-}
 
-#generate-btn:hover {
-  background-color: #cc0000;
-  transform: scale(1.05);
-}
 
 /* LINKS */
-a {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  text-decoration: none;
-  color: #000000;
-  transition: color 0.3s;
-}
 
-a:hover {
-  color: #0000005a;
-}
 
 /* DYNAMIC MENU */
 
@@ -117,6 +81,7 @@ nav {
 nav:hover {
   box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
 }
+
 
 /* List styles */
 nav ul {
@@ -198,100 +163,6 @@ nav ul li ul li a:hover, nav ul li ul li a.selected {
 
 
 
-p {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
-  text-align: left; /* Ensure text alignment is left */
-  width: 80%; /* Adjust the width as needed */
-  max-width: 800px; /* Increase the maximum width for better readability */
-  margin: 0px auto; /* Center align the paragraph with top/bottom margin */
-  color: #ffffff;
-  position: relative; /* Add position relative for absolute positioning */
-  left: 7%; /* Adjust the horizontal position */
-  top: 0px; /* Adjust the vertical position */
-}
-
-.p2 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2em;
-  text-align: left; /* Ensure text alignment is left */
-  width: 80%; /* Adjust the width as needed */
-  max-width: 800px; /* Increase the maximum width for better readability */
-  margin: 0px auto; /* Center align the paragraph with top/bottom margin */
-  color: #ffffff;
-  position: relative; /* Add position relative for absolute positioning */
-  left: 20%; /* Adjust the horizontal position */
-  top: -20px; /* Adjust the vertical position */
-}
-
-.p3 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1em;
-  text-align: left; /* Ensure text alignment is left */
-  width: 80%; /* Adjust the width as needed */
-  max-width: 800px; /* Increase the maximum width for better readability */
-  margin: 0px auto; /* Center align the paragraph with top/bottom margin */
-  color: #ffffff;
-  position: relative; /* Add position relative for absolute positioning */
-  left: 20%; /* Adjust the horizontal position */
-  top: -20px; /* Adjust the vertical position */
-}
-
-body {
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.welcome-section {
-  text-align: center;
-  padding: 0px;
-}
-
-
-.typing-animation {
-  display: inline-block;
-  text-align: left;
-  max-width: 100%;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 130px;
-  line-height: 1.5;
-  color: #ffffff;
-}
-
-.typing-animation .line {
-  display: inline-block;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 1px solid #44444400;
-  opacity: 0; /* Initially hidden */
-  animation: blink-caret 0.5s step-end infinite;
-}
-
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #00000000;
-  }
-}
-
-
-
-
-
-
-#particles-js {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -20;
-}
-
-html {
-  scroll-behavior: smooth;
-}
 
 
 
@@ -303,4 +174,177 @@ footer {
   flex-shrink: 0;
 }
 
+/* Container Styling */
+/* Container styles */
+.container {
+  max-width: 600px; /* Limiting the maximum width */
+  margin: 20px auto; /* Centering the container and adding margin */
+  padding: 20px; /* Padding inside the container */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+  background-color: #ffffff; /* White background */
+  text-align: center; /* Center align content */
+}
 
+.quote {
+  margin-top: 20px; /* Spacing between title and content */
+  font-size: 1.2em; /* Slightly smaller font size */
+  font-style: italic;
+  color: #666666; /* Light gray text */
+}
+
+button {
+  margin: 10px; /* Spacing around buttons */
+  padding: 12px 24px; /* Larger padding for buttons */
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px; /* Rounded corners for buttons */
+  color: white;
+  transition: background-color 0.3s, transform 0.2s ease-out;
+}
+
+button#generate-joke-btn {
+  background-color: #007BFF; /* Blue color */
+}
+
+button#generate-inspirational-btn {
+  background-color: #28A745; /* Green color */
+}
+
+button#generate-math-joke-btn {
+  background-color: #DC3545; /* Red color */
+}
+
+button#generate-trivia-fact-btn {
+  background-color: #dc5c35; /* Red color */
+}
+button#generate-affirmation-btn {
+  background-color: #dc35aa; /* Red color */
+}
+
+#guess-game {
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  color: white;
+  transition: background 0.5s ease;
+}
+
+#guess-game h2 {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#guess-game p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+#guess-input {
+  padding: 12px;
+  width: 120px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+#guess-input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.5);
+}
+
+#guess-btn {
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#guess-btn:hover {
+  background-color: #ee5253;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+#guess-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#guess-result {
+  margin-top: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px;
+  text-align: center;
+}
+
+#temperature {
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to right, red, orange, yellow, green, cyan, blue);
+  margin-top: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+#temperature-indicator {
+  width: 10px;
+  height: 30px;
+  background-color: white;
+  position: absolute;
+  top: -5px;
+  transform: translateX(-50%);
+  transition: left 0.5s ease;
+}
+
+button:hover {
+  filter: brightness(90%); /* Slightly darken on hover */
+}
+
+button:active {
+  transform: scale(0.95); /* Scale down on click */
+}
+
+.content-container {
+  margin-top: 20px; /* Spacing between buttons and content */
+  padding: 16px; /* Padding inside the content container */
+  border: 1px solid #eee; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light gray background */
+  text-align: left; /* Left align text */
+}
+
+.loading-message {
+  font-size: 1.2em; /* Font size for loading message */
+  color: #666666; /* Light gray text */
+  margin-bottom: 10px; /* Spacing below loading message */
+  animation: pulse 1.5s infinite alternate; /* Pulse animation */
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.8; /* Lower opacity */
+  }
+  to {
+    opacity: 1; /* Full opacity */
+  }
+}

@@ -3,41 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Liam's Index">
-    <meta name="author" content="Liam Moodley"> 
-    <meta property="og:title" content="Liam Moodley: Web Design">
-    <meta property="og:description" content="GateWay to The Internet">
-    <meta property="og:type" content="Base Website"> 
-    
-    <title>Playground</title>
+    <title>Random Quote Generator</title>
     <link rel="stylesheet" href="../../styles/home.css">
-   
     <script defer src="../../Scripts/activePage.js"></script>
     <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Playground");</script>
+
 </head>
 <body>
     <header>
         <nav>
-    
-        
         </nav>
     </header>
-    <body>
+    <main>
         <div class="container">
-            <h1>Random Quote Generator</h1>
+            <h1>Random Generator</h1>
             <div class="quote" id="quote"></div>
-            <button id="generate-btn">Generate Quote</button>
-        </div>
-        <script src="../../Scripts/quote.js"></script>
-        
-    </body>
- </main>
+            <button id="generate-joke-btn">Generate Joke</button>
+            <button id="generate-inspirational-btn">Generate Inspirational Quote</button>
+            <button id="generate-math-joke-btn">Generate Math Joke</button>
+            <button id="generate-trivia-fact-btn">Generate Trivia Fact</button>
+            <button id="generate-affirmation-btn">Generate Affirmation</button>
 
- 
- <footer>
-        
-    <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
-  </footer>
-    
+            <div class="content-container" id="content-container"></div>
+
+            <!-- New Guess the Number game section -->
+            <div id="guess-game">
+                <h2>Guess the Number Game</h2>
+                <p>I'm thinking of a number between 1 and 1000. Can you guess it?</p>
+                <input type="number" id="guess-input" min="1" max="1000">
+                <button id="guess-btn">Guess</button>
+                <p id="guess-result"></p>
+                <div id="temperature">
+                    <div id="temperature-indicator"></div>
+                </div>
+            </div>
+        <footer>
+            <p style="text-align: center; opacity: 0.5; margin-top: 20px;">Brought to you by | LJ Media | © February 2024</p>
+        </footer>
+    </main>
+    <script src="../../Scripts/quote.js"></script>
+    <script src="../../Scripts/number.js"></script>
+  
 </body>
 </html>
