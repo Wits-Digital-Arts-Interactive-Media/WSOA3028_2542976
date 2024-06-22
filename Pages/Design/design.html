@@ -8,21 +8,14 @@
     <meta property="og:title" content="Liam Moodley: Web Design">
     <meta property="og:description" content="GateWay to The Internet">
     <meta property="og:type" content="Base Website">
-
     <title>Design</title>
     <link rel="stylesheet" href="../../styles/design.css">
-    
     <script defer src="../../Scripts/activePage.js"></script>
-    <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Design");</script>
-    
+    <script type="module">import {initialise} from "/WSOA3028_2542976/Scripts/script.js"; initialise("Design");</script>  
 </head>
-
-
 <body>
     <header>
-        <nav>
-           
-        
+        <nav>             
         </nav>
     </header>
     <div class="scroller" data-direction="left" data-speed="slow">
@@ -152,24 +145,9 @@
     <li><b>Blue (#0059FF)</b> offers a cool, calming effect that balances the brightness of yellow and adds a professional touch.</li>
 </ul>
 </section>
-
-
-
-   
-     
-        
-       
-          
-     
-       
-
       <h1 id="code-breakdown"><u>Code Breakdown</u></h1>   
-        
         <section></section>
         <section></section>
-        
-        
-
         <section class="card">
             <h2>FULL CODE BREAKDOWN Pt.1- </h2>
             <p> The structure and layout of my website is built primarily using HTML and CSS. The header contains a navigation menu implemented as an unordered list (ul) with list items (li) representing each menu item. The body section utilizes semantic HTML elements like (header), (nav), (main), and (footer) to organize the content hierarchy. To achieve the grid-like layout for displaying projects and blog posts,  I employed CSS Grid or Flexbox, which provide powerful layout capabilities. Additionally, CSS animations and transitions were used to create the subtle particle effect on the landing page.
@@ -385,14 +363,7 @@
 <section class="card">
     <h2>Portfolio Page</h2>
     <p>The main content area features four identical sections arranged in a row, each representing a portfolio item. These sections consist of a large black square with a smaller white square inside, symbolizing an image or thumbnail for each work. Below each image placeholder is space for the title of the work, and at the bottom of each section is a "See More" link, allowing viewers to access more details about each project. </p>
-</section>
-
-
-
-
-        
-        
-        
+</section> 
     </main>
     <div class="fixed-buttons">
         <button onclick="scrollToTop()">Back to Top</button>
@@ -400,51 +371,9 @@
         <button onclick="scrollToSection('code-breakdown')">Code Breakdown</button>
         <button onclick="scrollToSection('wireframes')">Old Wireframes</button>
         <button onclick="scrollToSection('wireframes2')">New Wireframes</button>
-
-       
       </div>
-      
-      <script>
-      function scrollToSection(id) {
-        document.getElementById(id).scrollIntoView({behavior: 'smooth'});
-      }
-      
-      function scrollToTop() {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-      }
-      </script>
-
-
-      </script>
-
-      <script>
-          const scrollers = document.querySelectorAll(".scroller");
-      
-      // If a user hasn't opted in for recuded motion, then we add the animation
-      if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-        addAnimation();
-      }
-      
-      function addAnimation() {
-        scrollers.forEach((scroller) => {
-          // add data-animated="true" to every `.scroller` on the page
-          scroller.setAttribute("data-animated", true);
-      
-          // Make an array from the elements within `.scroller-inner`
-          const scrollerInner = scroller.querySelector(".scroller__inner");
-          const scrollerContent = Array.from(scrollerInner.children);
-      
-          // For each item in the array, clone it
-          // add aria-hidden to it
-          // add it into the `.scroller-inner`
-          scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-          });
-        });
-      }
-      
-        </script>
+      <footer></footer>
+      <script defer src="../../Scripts/design.js"></script>
+      <script defer src="../../Scripts/scrollanim.js"></script>
 </body>
 </html>
