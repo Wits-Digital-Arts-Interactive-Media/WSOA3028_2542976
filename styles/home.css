@@ -177,12 +177,12 @@ footer {
 /* Container Styling */
 /* Container styles */
 .container {
-  max-width: 600px; /* Limiting the maximum width */
+  max-width: 1000px; /* Limiting the maximum width */
   margin: 20px auto; /* Centering the container and adding margin */
   padding: 20px; /* Padding inside the container */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  background-color: #ffffff; /* White background */
+  background-color: #cfcfcf; /* White background */
   text-align: center; /* Center align content */
 }
 
@@ -228,7 +228,7 @@ button#generate-affirmation-btn {
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  color: white;
+  color: rgb(15, 15, 15);
   transition: background 0.5s ease;
 }
 
